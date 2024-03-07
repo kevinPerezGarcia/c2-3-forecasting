@@ -36,7 +36,7 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 * Fecha de entrega: por definir
 * Entregables: Por definir
 * ¿Individual o grupal? Individual
-* Data: puede conseguir una serie temporal de su preferencia o seleccionar otra del archivo Excel [seriesMacroeconomicas.xlsx](./data/raw/seriesMacroeconomicas.xlsx).<br>
+* Data: puede conseguir una serie temporal de su preferencia o seleccionar otra de la base de datos [seriesMacroeconomicas.xlsx](https://www.kaggle.com/datasets/kevinprezgarca/peru-balanza-comercial-series-macroeconomicas/data) disponible en Kaggle .<br>
   *Nota*. Las series temporales elegidas entre alumnos deben ser distintas.
 
 ## Partes del trabajo final
