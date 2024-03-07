@@ -29,6 +29,7 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 - [📞 Contacto](#-contacto)
 - [📌 Tabla de contenido](#-tabla-de-contenido)
 - [Tiempos de la grabación](#tiempos-de-la-grabación)
+- [Bases de datos](#bases-de-datos)
 
 # Tiempos de la grabación
 
@@ -48,3 +49,8 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 - 02:31:05-02:31:50 [Práctica calificada 1 sobre Covid-19](./notebooks/pc1-componentes_suavizado_covid19/code.R)
 - 02:31:50-02:34:25 Consultas de compañeros
 - 02:34:25-02:42:43 Trabajo final del curso
+
+# Bases de datos
+
+- Para la prácticas dirigidas 1 y 2, se encuentran en la carpeta [data/raw/](./data/raw/).
+- Para la práctica calificada 1, se encuentra en el [enlace a Kaggle](https://www.kaggle.com/datasets/kevinprezgarca/peru-covid19).
