@@ -28,28 +28,32 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 - [🤝 Contribución](#-contribución)
 - [📞 Contacto](#-contacto)
 - [📌 Tabla de contenido](#-tabla-de-contenido)
+- [Partes del trabajo final](#partes-del-trabajo-final)
+  - [Parte 1. Referida a métodos de suavización](#parte-1-referida-a-métodos-de-suavización)
+  - [Parte 2. Referida al método Box Jenkins](#parte-2-referida-al-método-box-jenkins)
 - [Información sobre el trabajo final](#información-sobre-el-trabajo-final)
-  - [Partes del trabajo final](#partes-del-trabajo-final)
 
-# Información sobre el trabajo final
-
-* Fecha de entrega: por definir
-* Entregables: Por definir
-* ¿Individual o grupal? Individual
-* Data: puede conseguir una serie temporal de su preferencia o seleccionar otra de la base de datos [seriesMacroeconomicas.xlsx](https://www.kaggle.com/datasets/kevinprezgarca/peru-balanza-comercial-series-macroeconomicas/data) disponible en Kaggle .<br>
-  *Nota*. Las series temporales elegidas entre alumnos deben ser distintas.
-
-## Partes del trabajo final
+# Partes del trabajo final
 
 El trabajo final está conformado por 2 partes.
 
-* Parte 1. Método de suavización
+## Parte 1. Referida a métodos de suavización
+
+Para cada uno de los siguientes métodos de suavización, calcular el RMSE. Luego, realizar las comparaciones e interpretaciones de estos.
   
-  1. Desarrolle el método de suavización de medias móviles para $q=3$, $q=4$ y $q=5$.
-  2. Desarrolle el método de suavización exponencial.
-  3. Calcule el RSME para cada método de suavización, realice las comparaciones del caso e intrepete.
-   
-* Parte 2. Método Box Jenkins
+Métodos de suavización a desarrollar:
+  1. Método de suavización de medias móviles para $q=3$, $q=4$ y $q=5$.
+  2. Método de suavización exponencial.
+
+## Parte 2. Referida al método Box Jenkins
+
+Para cada uno de los siguientes modelos, calcular el RMSE. Luego, realizar las comparaciones e interpretaciones de estos.
+
+Modelos a desarrollar:
+  1. Uno a partir del auto ARIMA y 
+  2. otro a partir del correlograma.
+
+*Nota.* Tenga en cuenta la metodología de Box-Jenkins descrita a continuación:
   
   1. Especificación: Analice (análisis situacional y estadístico) la gráfica de la serie e identifique tendencias y volatilidades.
   2. identificación: Analice la estacionariedad en varianza y en media; use test de raíz unitaria; Transformación de Box-Cox; use las FAC y FCP para identificar posibles modelos.
@@ -57,3 +61,22 @@ El trabajo final está conformado por 2 partes.
   4. Verificación: Analice los residuales del modelo (aleatoriedad y normalidad); valide los supuestos del modelo.<br>
    *Nota*. Las etapas de identificación, estimación y verificación es cíclica.
   5. Pronósticos
+
+# Información sobre el trabajo final
+
+* Fecha de entrega:
+  - 22 de marzo, la parte 1.
+  - 05 de abril, la parte 2.
+* Softwares a usar: Puede usar uno de los dos siguientes lenguajes de programación.
+  - Lenguaje de programación R. El código está facilitado por el docente durante el desarrollo del curso.
+  - Lenguaje de programación Python. El código lo debe desarrollar el alumno.<br>
+  *Nota.* Este trabajo se desarrolló con el lenguaje de programación Python.
+* Entregables:
+  * Reportes en Quarto si se usó R.
+  * Reportes en Notebooks si se usó Python.
+* ¿Individual o grupal? Individual
+* Data: puede conseguir una serie temporal de su preferencia o seleccionar otra de la base de datos [seriesMacroeconomicas.xlsx](https://www.kaggle.com/datasets/kevinprezgarca/peru-balanza-comercial-series-macroeconomicas/data) disponible en Kaggle .<br>
+  *Nota.*
+  - Las series temporales elegidas entre alumnos deben ser distintas.
+  - La serie temporal escogida será utilizada para todo este trabajo.
+  - Serie temporal escogida: por definir.
