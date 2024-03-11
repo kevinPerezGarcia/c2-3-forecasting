@@ -42,7 +42,7 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 # Contenido del curso
 
 * [Sesión 1](./sesion1/). Introducción; Componentes de una serie temporal; Suavizado de una serie temporal
-* [Sesión 2](./sesion2/). Series estacionarias
+* [Sesión 2](./sesion2/). Series no estacionarias; Introducción a las series no estacionarias
 * Sesión 3.
 * Sesión 4.
 * Sesión 5.
