@@ -9,7 +9,7 @@ CICLO II <br>
 FORECASTING
 </p>
 
-<h1>SESION 2. SERIES ESTACIONARIAS</h1>
+<h1>SESION 2. SERIES ESTACIONARIAS E INTRODUCCIÓN A LAS SERIES NO ESTACIONARIAS</h1>
 
 # 👥 Alumno
 
@@ -32,6 +32,14 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 - [Bibliografía](#bibliografía)
 
 # Contenido de la sesión
+
+En esta sesión se desarrolla el tema de:
+- Series estacionarias
+  - pd1 y pc1 sobre pruebas de hipótesis de estacionariedad
+  - pd2 sobre Box-Cox
+  - pd3 sobre modelo ARMA(p,q)
+- una introducción a las series no estacionarias
+  - pd4 sobre series no estacionarias
 
 # Bibliografía
 
