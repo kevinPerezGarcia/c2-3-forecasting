@@ -69,6 +69,8 @@ Modelos a desarrollar:
   - 05 de abril, la parte 2.
 * Softwares a usar: Puede usar uno de los dos siguientes lenguajes de programación.
   - Lenguaje de programación R. El código está facilitado por el docente durante el desarrollo del curso.
+    - [pd2.R](../sesion1/notebooks/pd2-componentes_suavizado_serieTemporal/code.R) de la sesión 1 para la Parte 1 del trabajo final.
+    - [pd4.R](../sesion2/notebooks/pd4.R) para la Parte 2 del trabajo final.
   - Lenguaje de programación Python. El código lo debe desarrollar el alumno.<br>
   *Nota.* Este trabajo se desarrolló con el lenguaje de programación Python.
 * Entregables:
