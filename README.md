@@ -1,7 +1,7 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
 <p>
-AÑo 2024 <br>
+AÑO 2024 <br>
 UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
 FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
 MAESTRÍA EN DATA SCIENCE <br>
@@ -41,8 +41,8 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 
 # Contenido del curso
 
-* [Sesión 1](./sesion1/). Introducción; Componentes de una serie temporal; Suavizado de una serie temporal
-* [Sesión 2](./sesion2/). Series no estacionarias; Introducción a las series no estacionarias
+* [Sesión 1](./sesion1/). Introducción | Componentes de una serie temporal | Suavizado de una serie temporal
+* [Sesión 2](./sesion2/). Series estacionarias | Introducción a las series no estacionarias
 * Sesión 3.
 * Sesión 4.
 * Sesión 5.
