@@ -1,7 +1,7 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
 <p>
-AÑo 2024 <br>
+AÑO 2024 <br>
 UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
 FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
 MAESTRÍA EN DATA SCIENCE <br>
@@ -9,47 +9,33 @@ CICLO 2 <br>
 FORECASTING
 </p>
 
-<h1>TRABAJO FINAL</h1>
+<h1>TRABAJO FINAL. METODOLOGÍA DE BOX-JENKINS</h1>
 
-# 👥 Alumno
+# 👥 Autor
 
 [@Kevin Perez Garcia](https://www.linkedin.com/in/kevinperezgarcia)
 
-# 🤝 Contribución
+🤝 ¡Las observaciones, las recomendaciones y las contribuciones son bienvenidas!
 
-¡Las observaciones, las recomendaciones y las contribuciones son bienvenidos!
+📞 Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
 
-# 📞 Contacto
+# Información del trabajo
 
-Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
-
-# 📌 Tabla de contenido
-- [👥 Alumno](#-alumno)
-- [🤝 Contribución](#-contribución)
-- [📞 Contacto](#-contacto)
-- [📌 Tabla de contenido](#-tabla-de-contenido)
-- [Información sobre el trabajo final](#información-sobre-el-trabajo-final)
-  - [Partes del trabajo final](#partes-del-trabajo-final)
-
-# Información sobre el trabajo final
-
-* Fecha de entrega: por definir
-* Entregables: Por definir
+* Fecha de entrega: 05 de abril.
+* Softwares a usar: Puede usar uno de los dos siguientes lenguajes de programación.
+  - Lenguaje de programación R. Código facilitado por el docente ([pd4.R de la sesión 2](../sesion2/notebooks/pd4.R)).
+  - Lenguaje de programación Python. El código lo debe desarrollar el alumno.<br>
+  *Nota.* Este trabajo se desarrolló con el lenguaje de programación Python.
+* Entregables:
+  * Reportes en Quarto si se usó R.
+  * Reportes en Notebooks si se usó Python.
 * ¿Individual o grupal? Individual
-* Data: puede conseguir una serie temporal de su preferencia o seleccionar otra de la base de datos [seriesMacroeconomicas.xlsx](https://www.kaggle.com/datasets/kevinprezgarca/peru-balanza-comercial-series-macroeconomicas/data) disponible en Kaggle .<br>
-  *Nota*. Las series temporales elegidas entre alumnos deben ser distintas.
+* Data: La misma serie temporal que eligió para el trabajo inicial.
+* Trabajo: Para cada uno de los siguientes modelos, calcular el RMSE. Luego, realizar las comparaciones e interpretaciones de estos. Modelos a desarrollar:
+  1. Uno a partir del auto ARIMA y 
+  2. otro a partir del correlograma.
 
-## Partes del trabajo final
-
-El trabajo final está conformado por 2 partes.
-
-* Parte 1. Método de suavización
-  
-  1. Desarrolle el método de suavización de medias móviles para $q=3$, $q=4$ y $q=5$.
-  2. Desarrolle el método de suavización exponencial.
-  3. Calcule el RSME para cada método de suavización, realice las comparaciones del caso e intrepete.
-   
-* Parte 2. Método Box Jenkins
+*Nota.* Tenga en cuenta la metodología de Box-Jenkins descrita a continuación:
   
   1. Especificación: Analice (análisis situacional y estadístico) la gráfica de la serie e identifique tendencias y volatilidades.
   2. identificación: Analice la estacionariedad en varianza y en media; use test de raíz unitaria; Transformación de Box-Cox; use las FAC y FCP para identificar posibles modelos.
