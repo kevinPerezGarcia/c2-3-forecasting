@@ -29,6 +29,7 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 - [📌 Tabla de contenido](#-tabla-de-contenido)
 - [Información del curso](#información-del-curso)
 - [Contenido del curso](#contenido-del-curso)
+- [Trabajos](#trabajos)
 - [Bibliografía](#bibliografía)
 
 # Información del curso
@@ -51,5 +52,10 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 * Sesión 6.
 * Sesión 7.
 * Sesión 8.
+
+# Trabajos
+
+* [Trabajo inicial](/trabajoInicial/). Métodos de suavizamiento de una serie temporal
+* [Trabajo final](/trabajoFinal/). Metodología Box-jenkins
 
 # Bibliografía
