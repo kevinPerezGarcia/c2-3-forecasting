@@ -6,7 +6,7 @@ UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
 FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
 MAESTRÍA EN DATA SCIENCE <br>
 CICLO 2 <br>
-FORECASTING
+FORECASTING <br>
 SESION 1. INTRODUCCIÓN; COMPONENTES DE UNA SERIE TEMPORAL; SUAVIZADO DE UNA SERIE TEMPORAL
 </p>
 
@@ -22,4 +22,10 @@ SESION 1. INTRODUCCIÓN; COMPONENTES DE UNA SERIE TEMPORAL; SUAVIZADO DE UNA SER
 
 # Contenido de la sesión
 
-El objetivo de esta práctica dirigida es aprender a descomponer una serie temporal.
+El objetivo de esta práctica dirigida es aprender a descomponer. Para ello se desarrolla los siguientes códigos:
+
+* Código R:
+  * Proporcionada por el profesor: [code-profesor.R](/sesion1/pd1/notebooks/code-profesor.R)
+  * Reescrita por el alumno: [code-alumno.R](/sesion1/pd1/notebooks/code-alumno.R)
+* Código Python:
+  * Versión equivalente del código R reescrita por el alumno: [code-alumno.ipynb](/sesion1/pd1/notebooks/code-alumno.ipynb)
