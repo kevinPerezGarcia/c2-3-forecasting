@@ -8,40 +8,25 @@ library(smooth)   # Para suavizado de series temporales
 library(TTR)      # Para cálculo de indicadores técnicos
 
 # Lectura de datos desde un archivo CSV
-datos <- read.csv("./data/raw/DATOS_SERIES_FINALES.csv", header = TRUE, sep = ";" ,dec = ".") |> as.data.frame()
+datos <- read.csv("./sesion1/pd2/data/raw/DATOS_SERIES_FINALES.csv", header = TRUE, sep = ";" ,dec = ".") |> as.data.frame()
 
 # Muestra la estructura de los datos
 str(datos)
 
-# Selecciona las columnas de Exportaciones e Importaciones
+# Selecciona la columna de Exportaciones
 Exportaciones <- select(datos, XNT)
-Importaciones <- select(datos, IMP)
 
 # Convierte las series de tiempo en objetos 'ts' con frecuencia mensual
 Serie_Exportaciones <- ts(Exportaciones, start = c(1994, 1), end = c(2021, 8), frequency = 12)
-Serie_Importaciones <- ts(Importaciones, start = c(1994, 1), end = c(2021, 8), frequency = 12)
 
 # Muestra las series de tiempo
 print(Serie_Exportaciones)
-print(Serie_Importaciones)
 
-# Gráficos de Exportaciones e Importaciones
+# Gráficos de Exportaciones
 par(mfrow = c(2, 1)) # Organiza los gráficos en 2 filas y 1 columna
-
-# Gráfico de Exportaciones
 plot(Serie_Exportaciones)
 boxplot(Serie_Exportaciones ~ cycle(Serie_Exportaciones))
-
-# Gráfico de Importaciones
-plot(Serie_Importaciones)
-boxplot(Serie_Importaciones ~ cycle(Serie_Importaciones))
-
-# Restaurar la configuración original de los gráficos
 par(mfrow = c(1, 1))
-
-# Descomposición de las Exportaciones en tendencia, estacionalidad y residuo
-Desc_Exportaciones <- decompose(Serie_Exportaciones)
-plot(Desc_Exportaciones, xlab='Año')
 
 ######################################################################
 ################### SUAVIZACION POR MEDIAS MOVILES ###################
