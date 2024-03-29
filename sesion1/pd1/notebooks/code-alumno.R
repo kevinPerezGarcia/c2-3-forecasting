@@ -4,7 +4,7 @@ library(graphics)
 library(dplyr)
 
 #Lectura de datos
-datos <-read.spss("./data/raw/BASE SERIES TEMPORAL.sav",
+datos <-read.spss("./sesion1/pd1/data/raw/BASE SERIES TEMPORAL.sav",
                   use.value.labels=TRUE, 
                   to.data.frame=TRUE)
 
@@ -47,19 +47,3 @@ plot(dif1.x)
 #Eliminar la estacionalidad de la serie
 tsstationary <- diff(dif1.x, lag=12)
 plot(tsstationary)
-
-#Funciones de autocorrelacion
-par(mfrow = c(2,1))
-acf(tsstationary, lag.max=34)
-pacf(tsstationary, lag.max=34)
-par(mfrow = c(1,1))
-
-par(mfrow = c(2,1))
-acf(DesemSerie, lag.max=34)
-pacf(DesemSerie, lag.max=34)
-par(mfrow = c(1,1))
-
-par(mfrow = c(2,1))
-acf(dif1.x, lag.max=34)
-pacf(dif1.x, lag.max=34)
-par(mfrow = c(1,1))
