@@ -1,18 +1,16 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
-<p>
-AÑO 2024 <br>
-UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
-FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
-MAESTRÍA EN DATA SCIENCE <br>
-CICLO 2 <br>
-FORECASTING
-SESION 1. INTRODUCCIÓN; COMPONENTES DE UNA SERIE TEMPORAL; SUAVIZADO DE UNA SERIE TEMPORAL
-</p>
+> Año 2024 <br>
+Universidad Nacional de Ingeniería <br>
+Facultad de Ingeniería Económica, Estadística y Ciencias Sociales <br>
+Maestría en Data Science <br>
+Ciclo 2 <br>
+Forecasting <br>
+Sesión 1. Introducción, Componentes y Suavizado de una Serie Temporal
 
-<h1>PRACTICA DIRIGIDA 2. SUAVIZAMIENTO DE UNA SERIE TEMPORAL</h1>
+# Práctica Dirigida 2. Suavizamiento de una Serie Temporal
 
-# 👥 Autor
+## 👥 Autor
 
 [@Kevin Perez Garcia](https://www.linkedin.com/in/kevinperezgarcia)
 
@@ -20,6 +18,6 @@ SESION 1. INTRODUCCIÓN; COMPONENTES DE UNA SERIE TEMPORAL; SUAVIZADO DE UNA SER
 
 📞 Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
 
-# Contenido de la sesión
+## Contenido de la sesión
 
 El objetivo de esta práctica dirigida es aprender a suavizar una serie temporal.
