@@ -1,46 +1,41 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
-<p>
-AÑO 2024 <br>
-UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
-FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
-MAESTRÍA EN DATA SCIENCE <br>
-CICLO II <br>
-</p>
+> Año 2024 <br>
+Universidad Nacional de Ingeniería <br>
+Facultad de Ingeniería Económica, Estadística y Ciencias Sociales <br>
+Maestría en Data Science <br>
+Ciclo 2
 
-<h1>FORECASTING</h1>
+# Forecasting
 
-# 👥 Alumno
+## 👥 Autor
 
 [@Kevin Perez Garcia](https://www.linkedin.com/in/kevinperezgarcia)
 
-# 🤝 Contribución
+🤝 ¡Las observaciones, las recomendaciones y las contribuciones son bienvenidas!
 
-¡Las observaciones, las recomendaciones y las contribuciones son bienvenidos!
+📞 Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
 
-# 📞 Contacto
+## 📌 Tabla de contenido
+- [Forecasting](#forecasting)
+  - [👥 Autor](#-autor)
+  - [📌 Tabla de contenido](#-tabla-de-contenido)
+  - [Información del curso](#información-del-curso)
+  - [Contenido del curso](#contenido-del-curso)
+  - [Trabajos](#trabajos)
 
-Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
-
-# 📌 Tabla de contenido
-- [👥 Alumno](#-alumno)
-- [🤝 Contribución](#-contribución)
-- [📞 Contacto](#-contacto)
-- [📌 Tabla de contenido](#-tabla-de-contenido)
-- [Información del curso](#información-del-curso)
-- [Contenido del curso](#contenido-del-curso)
-- [Trabajos](#trabajos)
-- [Bibliografía](#bibliografía)
-
-# Información del curso
+## Información del curso
 
 * Créditos: 2
 * Cantidad de horas: 24
 * Número de sesiones: 8
 * Profesor: [Omar Antonio Chincaro del Coral](https://www.linkedin.com/in/oachincaro/)
-* Software a usar: Lenguaje de programación R
+* Software a usar:
+  * Lenguaje de programación R por el profesor
+  * Lengujae de programación Python por el alumno <br>
+  *Nota.* Así, en la carpeta `notebook` de las distintas prácticas dirigidas y calificadas, encontrará código R y código Python que realizan lo mismo o casi lo mismo.
 
-# Contenido del curso
+## Contenido del curso
 
 * [Sesión 1](./sesion1/). Introducción | Componentes de una serie temporal | Suavizado de una serie temporal
   * [Práctica dirigida 1](/sesion1/pd1/). Componentes de una serie temporal
@@ -53,9 +48,6 @@ Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.
 * Sesión 7.
 * Sesión 8.
 
-# Trabajos
+## Trabajos
 
 * [Trabajo inicial](/trabajoInicial/). Métodos de suavizamiento de una serie temporal
-* [Trabajo final](/trabajoFinal/). Metodología Box-jenkins
-
-# Bibliografía
