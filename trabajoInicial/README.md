@@ -1,17 +1,15 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
-<p>
-AÑO 2024 <br>
-UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
-FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
-MAESTRÍA EN DATA SCIENCE <br>
-CICLO 2 <br>
-FORECASTING
-</p>
+> Año 2024 <br>
+Universidad Nacional de Ingeniería <br>
+Facultad de Ingeniería Económica, Estadística y Ciencias Sociales <br>
+Maestría en Data Science <br>
+Ciclo 2 <br>
+Forecasting
 
-<h1>TRABAJO INICIAL. MÉTODOS DE SUAVIZAMIENTO DE SERIES TEMPORALES</h1>
+Trabajo Inicial. Métodos de Suavizamiento de Series Temporales
 
-# 👥 Autor
+## 👥 Autor
 
 [@Kevin Perez Garcia](https://www.linkedin.com/in/kevinperezgarcia)
 
@@ -19,7 +17,7 @@ FORECASTING
 
 📞 Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
 
-# Información del trabajo
+## Información del trabajo
 
 * Fecha de entrega: 29 de marzo
 * Softwares a usar: Puede usar uno de los dos siguientes lenguajes de programación.
@@ -34,7 +32,7 @@ FORECASTING
   *Nota.*
   - Las series temporales elegidas entre alumnos deben ser distintas.
   - La serie temporal escogida será utilizada para todo este trabajo.
-  - Serie temporal escogida: por definir.
+  - Serie temporal escogida: XNT15 (plomo), a partir de la base de datos `seriesMacroeconomicas.xlsx`.
 * Trabajo: Para cada uno de los siguientes métodos de suavización, calcular el RMSE. Luego, realizar las comparaciones e interpretaciones de estos. Métodos de suavización a desarrollar:
   1. Método de suavización de medias móviles para $q=3$, $q=4$ y $q=5$.
   2. Método de suavización exponencial.
