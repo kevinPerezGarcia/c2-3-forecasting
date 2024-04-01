@@ -32,7 +32,7 @@ Trabajo Inicial. Métodos de Suavizamiento de Series Temporales
   *Nota.*
   - Las series temporales elegidas entre alumnos deben ser distintas.
   - La serie temporal escogida será utilizada para todo este trabajo.
-  - Serie temporal escogida: por definir.
+  - Serie temporal escogida: XNT15 (plomo), a partir de la base de datos `seriesMacroeconomicas.xlsx`.
 * Trabajo: Para cada uno de los siguientes métodos de suavización, calcular el RMSE. Luego, realizar las comparaciones e interpretaciones de estos. Métodos de suavización a desarrollar:
   1. Método de suavización de medias móviles para $q=3$, $q=4$ y $q=5$.
   2. Método de suavización exponencial.
