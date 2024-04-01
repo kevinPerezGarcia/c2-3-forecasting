@@ -7,7 +7,7 @@ Maestría en Data Science <br>
 Ciclo 2 <br>
 Forecasting
 
-Trabajo Inicial. Métodos de Suavizamiento de Series Temporales
+# Trabajo Inicial. Métodos de Suavizamiento de Series Temporales
 
 ## 👥 Autor
 
