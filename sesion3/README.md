@@ -1,37 +1,40 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
-<p>
-AÑO 2024 <br>
-UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
-FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
-MAESTRÍA EN DATA SCIENCE <br>
-CICLO # <br>
-CURSO
-SESION #. TEMA DE LA SESION
-</p>
+> Año 2024 <br>
+Universidad Nacional de Ingeniería <br>
+Facultad de Ingeniería Económica, Estadística y Ciencias Sociales <br>
+Maestría en Data Science <br>
+Ciclo 2 <br>
+Forecasting <br>
 
-<h1>PRÁCTICA 'DIRIGIDA O CALIFICADA'. TEMA DE LA APLICACIÓN</h1>
+# Sesión 3. Repaso de series estacionarias | Series no estacionarias | Series estacionales
 
-# 👥 Alumno
+## 👥 Alumno
 
 [@Kevin Perez Garcia](https://www.linkedin.com/in/kevinperezgarcia)
 
-# 🤝 Contribución
+🤝 ¡Las observaciones, las recomendaciones y las contribuciones son bienvenidas!
 
-¡Las observaciones, las recomendaciones y las contribuciones son bienvenidos!
+📞 Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
 
-# 📞 Contacto
+## 📌 Tabla de contenido
+- [Sesión 3. Repaso de series estacionarias | Series no estacionarias | Series estacionales](#sesión-3-repaso-de-series-estacionarias--series-no-estacionarias--series-estacionales)
+  - [👥 Alumno](#-alumno)
+  - [📌 Tabla de contenido](#-tabla-de-contenido)
+  - [Contenido de la sesión](#contenido-de-la-sesión)
+  - [Práctica dirigida](#práctica-dirigida)
 
-Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
+## Contenido de la sesión
 
-# 📌 Tabla de contenido
-- [👥 Alumno](#-alumno)
-- [🤝 Contribución](#-contribución)
-- [📞 Contacto](#-contacto)
-- [📌 Tabla de contenido](#-tabla-de-contenido)
-- [Contenido de la sesión](#contenido-de-la-sesión)
-- [Bibliografía](#bibliografía)
+En esta sesión se desarrolla los siguientes puntos:
+- Series estacionarias - Repaso
+- Series no estacionarias
+- Series estacionales
+- Resumen del curso hasta este punto
 
-# Contenido de la sesión
+Estos están presentados en la [presentación](/sesion3/references/presentacion.pdf) de esta sesión.
 
-# Bibliografía
+## Práctica dirigida
+
+* [Práctica dirigida](/sesion3/notebooks/code.R) sobre implementación de la metodología Box-Jenkins.
+
