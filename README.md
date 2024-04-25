@@ -43,7 +43,8 @@ Ciclo 2
 * [Sesión 2](./sesion2/). Series estacionarias | Introducción a las series no estacionarias
 * [Sesión 3](/sesion3/). Repaso de series estacionarias | Series no estacionarias | Series estacionales
   * [Práctica dirigida](/sesion3/notebooks/code.R). Implementación de la metodología Box-Jenkins
-* Sesión 4.
+* [Sesión 4](/sesion4/). Implementación de la metodología Box-Jenkins
+  * [Práctica dirigida](/sesion4/notebooks/code-alumno.R). Implementación de la metodología Box-Jenkins
 * Sesión 5.
 * Sesión 6.
 * Sesión 7.
