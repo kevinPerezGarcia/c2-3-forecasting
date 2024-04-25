@@ -41,7 +41,8 @@ Ciclo 2
   * [Práctica dirigida 1](/sesion1/pd1/). Componentes de una serie temporal
   * [Práctica dirigida 2](/sesion1/pd2/). Suavizamiento de una serie temporal
 * [Sesión 2](./sesion2/). Series estacionarias | Introducción a las series no estacionarias
-* Sesión 3.
+* [Sesión 3](/sesion3/). Repaso de series estacionarias | Series no estacionarias | Series estacionales
+  * [Práctica dirigida](/sesion3/notebooks/code.R). Implementación de la metodología Box-Jenkins
 * Sesión 4.
 * Sesión 5.
 * Sesión 6.
