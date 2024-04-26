@@ -1,0 +1,9 @@
+PERIODO : Periodo
+XNPT : Exportaciones de productos tradicionales (en MM de soles)
+XPNOT : Exportaciones de productos no tradicionales (en MM de soles)
+XOTROS : Otras exportaciones (en MM de soles)
+IMPBCON : Importaciones de bienes de consumo (en MM de soles)
+IMPINS : Importaciones de bienes insolutos (en MM de soles)
+IMPBCAP : Importaciones de bienes de capital (en MM de soles)
+IMPOTROS : Otras importaciones (en MM de soles)
+BAL : Balanza comercial (en MM de soles)
