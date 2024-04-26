@@ -47,7 +47,8 @@ Ciclo 2
   * [Práctica dirigida](/sesion4/notebooks/code-alumno.R). Implementación de la metodología Box-Jenkins
 * [Sesión 5](/sesion5/). Series heterocedásticas
   * Práctica dirigida. Implementación de la metodología Box-Jenkins sobre una serie heterocedástica
-* Sesión 6.
+* [Sesión 6](/sesion6/). Pronósticos en series heterocedásticas
+  * Práctica dirigida. Implementación de la metodología Box-Jenkins sobre una serie heterocedástica y pronósticos.
 * Sesión 7.
 * Sesión 8.
 
