@@ -51,7 +51,8 @@ Ciclo 2
   * Práctica dirigida. Implementación de la metodología Box-Jenkins sobre una serie heterocedástica y pronósticos.
 * [Sesión 7](/sesion7/). Modelo ARIMA
   * Práctica dirigida. Desarrollo de un modelo ARIMAX
-* Sesión 8.
+
+*Nota.* No se llevó a cabo la sesión 8.
 
 ## Trabajos
 
