@@ -1,17 +1,15 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
-<p>
-AÑO 2024 <br>
-UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
-FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
-MAESTRÍA EN DATA SCIENCE <br>
-CICLO 2 <br>
-FORECASTING
-</p>
+> Año 2024 <br>
+Universidad Nacional de Ingeniería <br>
+Facultad de Ingeniería Económica, Estadística y Ciencias Sociales <br>
+Maestría en Data Science <br>
+Ciclo 2 <br>
+Forecasting
 
-<h1>TRABAJO FINAL. METODOLOGÍA DE BOX-JENKINS</h1>
+# Trabajo Final. Metodología Box-Jenkins sobre la serie temporal de exportaciones del plomo
 
-# 👥 Autor
+## 👥 Alumno
 
 [@Kevin Perez Garcia](https://www.linkedin.com/in/kevinperezgarcia)
 
@@ -19,7 +17,7 @@ FORECASTING
 
 📞 Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
 
-# Información del trabajo
+## Información del trabajo
 
 * Fecha de entrega: 30 de abril.
 * Softwares a usar: Puede usar uno de los dos siguientes lenguajes de programación.
