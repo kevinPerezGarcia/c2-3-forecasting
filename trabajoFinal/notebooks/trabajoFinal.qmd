@@ -1,0 +1,463 @@
+---
+title: "Trabajo final"
+author: "Kevin Perez Garcia"
+format: html
+editor: visual
+---
+
+# Serie Temporal del Plomo
+
+## Preparación de los datos
+
+Cargamos las librerías necesarias para este trabajo.
+
+```{r, results='none', message=FALSE}
+library(dplyr)
+library(forecast)
+library(tseries)
+library(lmtest)
+library(readr)
+library(FinTS)
+library(rugarch)
+```
+
+Importamos la base de datos, seleccionamos la variable plomo y la establecemos como serie temporal.
+
+```{r}
+datos <- read.csv("../data/raw/DATOS_XNT_PROD_TRAD.csv", header = TRUE, sep = ";" , dec = ".")
+Serie_plomo <- ts(datos$XNT15, start = c(1994,1), end = c(2021,8), frequency = 12)
+```
+
+## Especificación
+
+Vamos a explorar visualmente los datos.
+
+```{r}
+par(mfrow = c(2,1))
+plot(Serie_plomo)
+boxplot(Serie_plomo ~ cycle(Serie_plomo))
+par(mfrow = c(1,1))
+```
+
+La serie temporal del plomo presenta tendencia y volatilidad en general. Aunque podríamos partir la serie en dos periodos, tomando como año de corte el año del 2005. Sin embargo, para este trabajo optamos por toda la serie temporal.
+
+## Identificación
+
+### ¿La serie es o no estacionaria?
+
+Realicemos la prueba de raíz unitaria de Dicker-Fuller aumentado.
+
+```{r}
+adf.test(Serie_plomo,alternative="stationary")
+```
+
+Dado que el p-value es mayor que 5%, entonces rechazamos la hipótesis nula de estacionariedad de la serie temporal. Por ende, la serie plomo no es estacionaria.
+
+### Transformación de la serie
+
+Identifiquemos el valor óptimo de lambda para la transformación Box-Cox.
+
+```{r}
+lamb.x15 <- BoxCox.lambda(Serie_plomo)
+lamb.x15
+```
+
+Aplicamos la transformación Box-Cox con el valor óptimo de lambda.
+
+```{r}
+tran_box <- function(xt,lamb.x){
+  if (lamb.x == 0) {
+    xt_box <- log(xt)
+  } else {
+    xt_box <- (xt^lamb.x - 1)/lamb.x
+  }
+}
+
+Serie_plomo_boxCox <- tran_box(Serie_plomo, lamb.x15)
+plot(Serie_plomo_boxCox)
+```
+
+Realizamos la prueba de raíz unitaria sobre esta serie transformada.
+
+```{r}
+adf.test(Serie_plomo_boxCox,alternative="stationary")
+```
+
+Aún resulta ser no estacionaria.
+
+Tomamos la primera diferencia de esta serie transformada.
+
+```{r}
+D_Serie_plomo_boxCox = diff(Serie_plomo_boxCox, differences = 1)
+plot(D_Serie_plomo_boxCox)
+```
+
+Evaluamos si es estacionaria.
+
+```{r}
+adf.test(D_Serie_plomo_boxCox,alternative="stationary")
+```
+
+Ahora, esta nueva serie transformada y diferencia resulta ser estacionaria.
+
+### Funciones de autocorrelación
+
+```{r}
+par(mfrow = c(2,1))
+acf(D_Serie_plomo_boxCox, lag.max=34, main = "Función de autocorrelación")
+pacf(D_Serie_plomo_boxCox, lag.max=34, main = "Función de autocorrelación parcial")
+par(mfrow = c(1,1))
+```
+
+De acuerdo a las funciones de autocorrelación, $q=1$ y $p=4$.
+
+## Estimación
+
+```{r}
+modelo_2 = arima(Serie_plomo_boxCox, order = c(0,1,1))
+summary(modelo_2)
+coeftest(modelo_2)
+```
+
+Probemos el autoarima.
+
+```{r}
+modelo_auto = auto.arima(Serie_plomo_boxCox)
+summary(modelo_auto)
+coeftest(modelo_auto)
+```
+
+## Validación
+
+### Validación del modelo
+
+Visualizamos el comportamiento de los residuos.
+
+```{r}
+residuos_modelo2 = modelo_2$residuals
+hist(residuos_modelo2)
+boxplot(residuos_modelo2)
+plot(residuos_modelo2)
+```
+
+Según el histograma, los residuos parecen distribuirse de manera normal. De acuerdo al gráfico de los residuos parece ser que la volatilidad se deba a los residuos.
+
+Capturamos los residuos del modelo y realizamos una prueba de normalidad.
+
+```{r}
+residuos_modelo2 = residuos_modelo2[!is.na(residuos_modelo2)]
+jarque.bera.test(residuos_modelo2)
+```
+
+```{r}
+#Funciones de autocorrelacion
+par(mfrow = c(2,1))
+acf(residuos_modelo2, lag.max=34, main = "Función de autocorrelación")
+pacf(residuos_modelo2, lag.max=34, main = "Función de autocorrelación parcial")
+par(mfrow = c(1,1))
+```
+
+### Validación del modelo autoarima
+
+Visualizamos el comportamiento de los residuos.
+
+```{r}
+residuos_modelo_auto = modelo_auto$residuals
+hist(residuos_modelo_auto)
+boxplot(residuos_modelo_auto)
+plot(residuos_modelo_auto)
+```
+
+Capturamos los residuos del modelo y realizamos una prueba de normalidad.
+
+```{r}
+residuos_modelo_auto = residuos_modelo_auto[!is.na(residuos_modelo_auto)]
+jarque.bera.test(residuos_modelo_auto)
+```
+
+Este valor p significa que no hay suficiente evidencia estadística para rechazar la hipótesis nula a los niveles de significancia comunes (usualmente 0.05 o 0.01). Por lo tanto, con un valor p de 0.1818, puedes concluir que no se puede rechazar la hipótesis nula de que tus datos se distribuyen normalmente.
+
+Ahora evaluamos las funciones de autocorrelación de los residuos.
+
+```{r}
+par(mfrow = c(2,1))
+acf(residuos_modelo_auto^2, lag.max=34, main = "Función de autocorrelación")
+pacf(residuos_modelo_auto^2, lag.max=34, main = "Función de autocorrelación parcial")
+par(mfrow = c(1,1))
+```
+
+Los correlogramas muestran que hay un comportamiento heterocedástico de los residuos.
+
+# Heterocedasticidad
+
+## Identificación
+
+Analizamos los residuos al cuadrado.
+
+```{r}
+checkresiduals(modelo_auto)
+Errores_cuadrado = resid(modelo_auto)^2
+```
+
+Indicamos que sea una serie de tiempo.
+
+```{r}
+Serie_Errores_cuadrado <- ts(Errores_cuadrado, start = c(1994,1), end = c(2021,8), frequency = 12)
+print(Serie_Errores_cuadrado)
+```
+
+Visualizamos los residuos.
+
+```{r}
+par(mfrow = c(2,1))
+plot(Errores_cuadrado) 
+boxplot(Errores_cuadrado)
+par(mfrow = c(1,1))
+```
+
+### Prueba de componente ARCH en el modelo
+
+```{r}
+ModeloARCH1 = ArchTest(D_Serie_plomo_boxCox, lags = 1, demean = TRUE)
+ModeloARCH1
+```
+
+Concluímos la presencia de heterocedasticidad.
+
+```{r}
+ModeloARCH2 = ArchTest(D_Serie_plomo_boxCox, lags = 2, demean = TRUE)
+ModeloARCH2
+```
+
+Concluímos la presencia de heterocedasticidad.
+
+```{r}
+ModeloARCH3 = ArchTest(D_Serie_plomo_boxCox, lags = 3, demean = TRUE)
+ModeloARCH3
+```
+
+Concluímos la presencia de heterocedasticidad.
+
+```{r}
+ModeloARCH4 = ArchTest(D_Serie_plomo_boxCox, lags = 4, demean = TRUE)
+ModeloARCH4
+```
+
+Concluímos la presencia de heterocedasticidad.
+
+En general, concluímos que la serie temporal del plomo presenta heterocedasticidad.
+
+## Estimación
+
+### Plnateamiento del modelo ARCH / GARCH
+
+Tomamos como punto de partida a:
+
+```{r}
+ugarch0 = ugarchspec()
+ugarch0
+```
+
+Modelo GARCH (0,1)
+
+```{r}
+ugarch01 = ugarchspec(mean.model = list(armaOrder = c(0,1)))
+ugfit01 = ugarchfit(spec = ugarch01, data = D_Serie_plomo_boxCox)
+ugfit01
+```
+
+Modelo GARCH (0,2)
+
+```{r}
+ugarch02 = ugarchspec(mean.model = list(armaOrder = c(0,2)))
+ugfit02 = ugarchfit(spec = ugarch02, data = D_Serie_plomo_boxCox)
+ugfit02
+```
+
+Modelo GARCH (0,3)
+
+```{r}
+ugarch03 = ugarchspec(mean.model = list(armaOrder = c(0,3)))
+ugfit03 = ugarchfit(spec = ugarch03, data = D_Serie_plomo_boxCox)
+ugfit03
+```
+
+Modelo GARCH (0,4)
+
+```{r}
+ugarch04 = ugarchspec(mean.model = list(armaOrder = c(0,4)))
+ugfit04 = ugarchfit(spec = ugarch04, data = D_Serie_plomo_boxCox)
+ugfit04
+```
+
+Modelo GARCH (1,1)
+
+```{r}
+ugarch11 = ugarchspec(mean.model = list(armaOrder = c(1,1)))
+ugfit11 = ugarchfit(spec = ugarch11, data = D_Serie_plomo_boxCox)
+ugfit11
+```
+
+Modelo GARCH (1,2)
+
+```{r}
+ugarch12 = ugarchspec(mean.model = list(armaOrder = c(1,2)))
+ugfit12 = ugarchfit(spec = ugarch12, data = D_Serie_plomo_boxCox)
+ugfit12
+```
+
+Modelo GARCH (1,3)
+
+```{r}
+ugarch13 = ugarchspec(mean.model = list(armaOrder = c(1,3)))
+ugfit13 = ugarchfit(spec = ugarch13, data = D_Serie_plomo_boxCox)
+ugfit13
+```
+
+Modelo GARCH (1,4)
+
+```{r}
+ugarch14 = ugarchspec(mean.model = list(armaOrder = c(1,4)))
+ugfit14 = ugarchfit(spec = ugarch14, data = D_Serie_plomo_boxCox)
+ugfit14
+```
+
+Modelo GARCH (2,1)
+
+```{r}
+ugarch21 = ugarchspec(mean.model = list(armaOrder = c(2,1)))
+ugfit21 = ugarchfit(spec = ugarch21, data = D_Serie_plomo_boxCox)
+ugfit21
+```
+
+Modelo GARCH (2,2)
+
+```{r}
+ugarch22 = ugarchspec(mean.model = list(armaOrder = c(2,2)))
+ugfit22 = ugarchfit(spec = ugarch22, data = D_Serie_plomo_boxCox)
+ugfit22
+```
+
+Modelo GARCH (2,3)
+
+```{r}
+ugarch23 = ugarchspec(mean.model = list(armaOrder = c(2,3)))
+ugfit23 = ugarchfit(spec = ugarch23, data = D_Serie_plomo_boxCox)
+ugfit23
+```
+
+Modelo GARCH (2,4)
+
+```{r}
+ugarch24 = ugarchspec(mean.model = list(armaOrder = c(2,4)))
+ugfit24 = ugarchfit(spec = ugarch24, data = D_Serie_plomo_boxCox)
+ugfit24
+```
+
+Modelo GARCH (3,1)
+
+```{r}
+ugarch31 = ugarchspec(mean.model = list(armaOrder = c(3,1)))
+ugfit31 = ugarchfit(spec = ugarch31, data = D_Serie_plomo_boxCox)
+ugfit31
+```
+
+Modelo GARCH (3,2)
+
+```{r}
+ugarch32 = ugarchspec(mean.model = list(armaOrder = c(3,2)))
+ugfit32 = ugarchfit(spec = ugarch32, data = D_Serie_plomo_boxCox)
+ugfit32
+```
+
+Modelo GARCH (3,3)
+
+```{r}
+ugarch33 = ugarchspec(mean.model = list(armaOrder = c(3,3)))
+ugfit33 = ugarchfit(spec = ugarch33, data = D_Serie_plomo_boxCox)
+ugfit33
+```
+
+Modelo GARCH (3,4)
+
+```{r}
+ugarch34 = ugarchspec(mean.model = list(armaOrder = c(3,4)))
+ugfit34 = ugarchfit(spec = ugarch34, data = D_Serie_plomo_boxCox)
+ugfit34
+```
+
+Comparamos el criterio de Akaike de estos modelos y elegimos el de menor valor.
+
+Modelo GARCH (0,1): 1.9844 Modelo GARCH (0,2): 1.9519 Modelo GARCH (0,3): 1.9581 Modelo GARCH (0,4): 1.9603 Modelo GARCH (1,1): 1.9542 Modelo GARCH (1,2): 1.9579 Modelo GARCH (1,3): 1.9624 Modelo GARCH (1,4): 1.9665 Modelo GARCH (2,1): 1.9618 Modelo GARCH (2,3): 1.9687 Modelo GARCH (2,4): 1.9615 Modelo GARCH (3,1): 1.9618 Modelo GARCH (3,2): 1.9652 Modelo GARCH (3,3): 1.8934 Modelo GARCH (3,4): 1.8840
+
+El mejor modelo es un GARCH(3,4) con un Akaike igual a 1.8840.
+
+## Validación
+
+### Validaciones al modelo garch (3,3)
+
+Los coeficientes del modelo final son:
+
+```{r}
+ugfit34@fit$coef
+```
+
+La varianza del modelo final es:
+
+```{r}
+ug_var = ugfit33@fit$var
+ug_var
+```
+
+```{r}
+library(ggplot2)
+autoplot(ts(ug_var)) + 
+  geom_line(color = "blue") + labs(title = "Varianza de nuestro modelo GARCH (3,4)")
+```
+
+### Análisis de los cuadrados de los residuales de la nueva serie
+
+```{r}
+ug_resid = (ugfit34@fit$residuals)^2
+autoplot(ts(ug_resid)) + autolayer(ts(ug_resid), series = "Residuales al cuadrado") + autolayer(ts(ug_var), series = "Varianza") + labs(title = "Residuales al cuadrado y Varianza de nuestro modelo GARCH (3,4)") + ylab("") + xlab("Tiempo")
+```
+
+Esta serie temporal presenta doble heterocedasticidad.
+
+### Correlogramas de los residuales al cuadrado de la nueva serie
+
+```{r}
+par(mfrow = c(2,1))
+acf(ug_resid, lag.max=34, main = "Función de autocorrelación")
+pacf(ug_resid, lag.max=34, main = "Función de autocorrelación parcial")
+par(mfrow = c(1,1))
+```
+
+Esta nueva serie de errores al cuadrado sigue siendo heterocedástica.
+
+```{r}
+checkresiduals(ugfit34@fit$residuals)
+```
+
+## Pronóstico
+
+```{r}
+prediccion <- forecast(modelo_auto, h=4)
+autoplot(prediccion)
+```
+
+## Modelo estimado
+
+Para obtener la ecuación estimada de una serie temporal con un modelo ARIMA y un modelo GARCH, necesitamos combinar los componentes de cada modelo.
+
+El modelo ARIMA(2,1,1)(2,0,0)\[12\] puede expresarse como:
+
+$$[ (1 - \phi_1 B - \phi_2 B^2) (1 - B)^1 (y_t - \mu) = (1 + \theta_1 B) \varepsilon_t ]$$
+
+Donde: $- ( \phi_1 ) y ( \phi_2 )$ son los coeficientes autorregresivos. $- ( \theta_1 )$ es el coeficiente de la parte de media móvil. $- ( B )$ es el operador de rezago. $- ( \mu )$ es la media del proceso. $- ( \varepsilon_t )$ es el término de error.
+
+Y el modelo GARCH(3,4) puede expresarse como:
+
+$$[ \sigma_t^2 = \omega + \alpha*1* \varepsilon{t-1}^2 + \beta*1* \sigma{t-1}^2 + \alpha*2* \varepsilon{t-2}^2 + \beta*2* \sigma{t-2}^2 + \alpha*3* \varepsilon{t-3}^2 + \beta*3* \sigma{t-3}^2 + \alpha*4* \varepsilon{t-4}^2 ]$$
+
+Donde: $- ( \omega )$ es la constante. $- ( \alpha\_i )$ son los coeficientes de la parte ARCH. $- ( \beta\_i )$ son los coeficientes de la parte GARCH.

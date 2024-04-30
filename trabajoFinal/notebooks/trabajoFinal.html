@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kevin Perez Garcia">
+
+<title>Trabajo final</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="trabajoFinal_files/libs/clipboard/clipboard.min.js"></script>
+<script src="trabajoFinal_files/libs/quarto-html/quarto.js"></script>
+<script src="trabajoFinal_files/libs/quarto-html/popper.min.js"></script>
+<script src="trabajoFinal_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="trabajoFinal_files/libs/quarto-html/anchor.min.js"></script>
+<link href="trabajoFinal_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="trabajoFinal_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="trabajoFinal_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="trabajoFinal_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="trabajoFinal_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Trabajo final</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kevin Perez Garcia </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="serie-temporal-del-plomo" class="level1">
+<h1>Serie Temporal del Plomo</h1>
+<section id="preparación-de-los-datos" class="level2">
+<h2 class="anchored" data-anchor-id="preparación-de-los-datos">Preparación de los datos</h2>
+<p>Cargamos las librerías necesarias para este trabajo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'forecast' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tseries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tseries' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'lmtest' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'zoo' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(FinTS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'FinTS' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rugarch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'rugarch' was built under R version 4.2.3</code></pre>
+</div>
+</div>
+<p>Importamos la base de datos, seleccionamos la variable plomo y la establecemos como serie temporal.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data/raw/DATOS_XNT_PROD_TRAD.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">";"</span> , <span class="at">dec =</span> <span class="st">"."</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>Serie_plomo <span class="ot">&lt;-</span> <span class="fu">ts</span>(datos<span class="sc">$</span>XNT15, <span class="at">start =</span> <span class="fu">c</span>(<span class="dv">1994</span>,<span class="dv">1</span>), <span class="at">end =</span> <span class="fu">c</span>(<span class="dv">2021</span>,<span class="dv">8</span>), <span class="at">frequency =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="especificación" class="level2">
+<h2 class="anchored" data-anchor-id="especificación">Especificación</h2>
+<p>Vamos a explorar visualmente los datos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Serie_plomo)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Serie_plomo <span class="sc">~</span> <span class="fu">cycle</span>(Serie_plomo))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>La serie temporal del plomo presenta tendencia y volatilidad en general. Aunque podríamos partir la serie en dos periodos, tomando como año de corte el año del 2005. Sin embargo, para este trabajo optamos por toda la serie temporal.</p>
+</section>
+<section id="identificación" class="level2">
+<h2 class="anchored" data-anchor-id="identificación">Identificación</h2>
+<section id="la-serie-es-o-no-estacionaria" class="level3">
+<h3 class="anchored" data-anchor-id="la-serie-es-o-no-estacionaria">¿La serie es o no estacionaria?</h3>
+<p>Realicemos la prueba de raíz unitaria de Dicker-Fuller aumentado.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adf.test</span>(Serie_plomo,<span class="at">alternative=</span><span class="st">"stationary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Augmented Dickey-Fuller Test
+
+data:  Serie_plomo
+Dickey-Fuller = -2.3561, Lag order = 6, p-value = 0.4264
+alternative hypothesis: stationary</code></pre>
+</div>
+</div>
+<p>Dado que el p-value es mayor que 5%, entonces rechazamos la hipótesis nula de estacionariedad de la serie temporal. Por ende, la serie plomo no es estacionaria.</p>
+</section>
+<section id="transformación-de-la-serie" class="level3">
+<h3 class="anchored" data-anchor-id="transformación-de-la-serie">Transformación de la serie</h3>
+<p>Identifiquemos el valor óptimo de lambda para la transformación Box-Cox.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>lamb.x15 <span class="ot">&lt;-</span> <span class="fu">BoxCox.lambda</span>(Serie_plomo)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>lamb.x15</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1352101</code></pre>
+</div>
+</div>
+<p>Aplicamos la transformación Box-Cox con el valor óptimo de lambda.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tran_box <span class="ot">&lt;-</span> <span class="cf">function</span>(xt,lamb.x){</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (lamb.x <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    xt_box <span class="ot">&lt;-</span> <span class="fu">log</span>(xt)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    xt_box <span class="ot">&lt;-</span> (xt<span class="sc">^</span>lamb.x <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">/</span>lamb.x</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>Serie_plomo_boxCox <span class="ot">&lt;-</span> <span class="fu">tran_box</span>(Serie_plomo, lamb.x15)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Serie_plomo_boxCox)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Realizamos la prueba de raíz unitaria sobre esta serie transformada.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adf.test</span>(Serie_plomo_boxCox,<span class="at">alternative=</span><span class="st">"stationary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Augmented Dickey-Fuller Test
+
+data:  Serie_plomo_boxCox
+Dickey-Fuller = -1.8879, Lag order = 6, p-value = 0.6239
+alternative hypothesis: stationary</code></pre>
+</div>
+</div>
+<p>Aún resulta ser no estacionaria.</p>
+<p>Tomamos la primera diferencia de esta serie transformada.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>D_Serie_plomo_boxCox <span class="ot">=</span> <span class="fu">diff</span>(Serie_plomo_boxCox, <span class="at">differences =</span> <span class="dv">1</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(D_Serie_plomo_boxCox)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Evaluamos si es estacionaria.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adf.test</span>(D_Serie_plomo_boxCox,<span class="at">alternative=</span><span class="st">"stationary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in adf.test(D_Serie_plomo_boxCox, alternative = "stationary"): p-value
+smaller than printed p-value</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Augmented Dickey-Fuller Test
+
+data:  D_Serie_plomo_boxCox
+Dickey-Fuller = -10.17, Lag order = 6, p-value = 0.01
+alternative hypothesis: stationary</code></pre>
+</div>
+</div>
+<p>Ahora, esta nueva serie transformada y diferencia resulta ser estacionaria.</p>
+</section>
+<section id="funciones-de-autocorrelación" class="level3">
+<h3 class="anchored" data-anchor-id="funciones-de-autocorrelación">Funciones de autocorrelación</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">acf</span>(D_Serie_plomo_boxCox, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación"</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pacf</span>(D_Serie_plomo_boxCox, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación parcial"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>De acuerdo a las funciones de autocorrelación, <span class="math inline">\(q=1\)</span> y <span class="math inline">\(p=4\)</span>.</p>
+</section>
+</section>
+<section id="estimación" class="level2">
+<h2 class="anchored" data-anchor-id="estimación">Estimación</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>modelo_2 <span class="ot">=</span> <span class="fu">arima</span>(Serie_plomo_boxCox, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelo_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+arima(x = Serie_plomo_boxCox, order = c(0, 1, 1))
+
+Coefficients:
+          ma1
+      -0.8114
+s.e.   0.0263
+
+sigma^2 estimated as 0.4218:  log likelihood = -327.35,  aic = 658.69
+
+Training set error measures:
+                     ME      RMSE       MAE        MPE     MAPE      MASE
+Training set 0.06699502 0.6484927 0.5184251 -0.5057398 11.08249 0.7253665
+                   ACF1
+Training set -0.1720489</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(modelo_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+z test of coefficients:
+
+     Estimate Std. Error z value  Pr(&gt;|z|)    
+ma1 -0.811391   0.026328 -30.819 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Probemos el autoarima.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>modelo_auto <span class="ot">=</span> <span class="fu">auto.arima</span>(Serie_plomo_boxCox)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelo_auto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Series: Serie_plomo_boxCox 
+ARIMA(2,1,1)(2,0,0)[12] 
+
+Coefficients:
+          ar1      ar2      ma1    sar1    sar2
+      -0.2990  -0.1106  -0.6781  0.0872  0.1358
+s.e.   0.0852   0.0755   0.0702  0.0548  0.0557
+
+sigma^2 = 0.3975:  log likelihood = -315.31
+AIC=642.63   AICc=642.89   BIC=665.44
+
+Training set error measures:
+                     ME      RMSE       MAE        MPE     MAPE      MASE
+Training set 0.04632497 0.6247158 0.4928839 -0.7262001 10.48772 0.7049116
+                     ACF1
+Training set -0.006410278</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(modelo_auto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+z test of coefficients:
+
+      Estimate Std. Error z value  Pr(&gt;|z|)    
+ar1  -0.299014   0.085168 -3.5109 0.0004466 ***
+ar2  -0.110563   0.075521 -1.4640 0.1431950    
+ma1  -0.678100   0.070203 -9.6591 &lt; 2.2e-16 ***
+sar1  0.087189   0.054763  1.5921 0.1113601    
+sar2  0.135843   0.055745  2.4369 0.0148155 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</section>
+<section id="validación" class="level2">
+<h2 class="anchored" data-anchor-id="validación">Validación</h2>
+<section id="validación-del-modelo" class="level3">
+<h3 class="anchored" data-anchor-id="validación-del-modelo">Validación del modelo</h3>
+<p>Visualizamos el comportamiento de los residuos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>residuos_modelo2 <span class="ot">=</span> modelo_2<span class="sc">$</span>residuals</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(residuos_modelo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(residuos_modelo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(residuos_modelo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-13-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Según el histograma, los residuos parecen distribuirse de manera normal. De acuerdo al gráfico de los residuos parece ser que la volatilidad se deba a los residuos.</p>
+<p>Capturamos los residuos del modelo y realizamos una prueba de normalidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>residuos_modelo2 <span class="ot">=</span> residuos_modelo2[<span class="sc">!</span><span class="fu">is.na</span>(residuos_modelo2)]</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">jarque.bera.test</span>(residuos_modelo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Jarque Bera Test
+
+data:  residuos_modelo2
+X-squared = 5.8774, df = 2, p-value = 0.05293</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Funciones de autocorrelacion</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">acf</span>(residuos_modelo2, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación"</span>)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pacf</span>(residuos_modelo2, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación parcial"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="validación-del-modelo-autoarima" class="level3">
+<h3 class="anchored" data-anchor-id="validación-del-modelo-autoarima">Validación del modelo autoarima</h3>
+<p>Visualizamos el comportamiento de los residuos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>residuos_modelo_auto <span class="ot">=</span> modelo_auto<span class="sc">$</span>residuals</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(residuos_modelo_auto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(residuos_modelo_auto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-16-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(residuos_modelo_auto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-16-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Capturamos los residuos del modelo y realizamos una prueba de normalidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>residuos_modelo_auto <span class="ot">=</span> residuos_modelo_auto[<span class="sc">!</span><span class="fu">is.na</span>(residuos_modelo_auto)]</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">jarque.bera.test</span>(residuos_modelo_auto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Jarque Bera Test
+
+data:  residuos_modelo_auto
+X-squared = 3.4096, df = 2, p-value = 0.1818</code></pre>
+</div>
+</div>
+<p>Este valor p significa que no hay suficiente evidencia estadística para rechazar la hipótesis nula a los niveles de significancia comunes (usualmente 0.05 o 0.01). Por lo tanto, con un valor p de 0.1818, puedes concluir que no se puede rechazar la hipótesis nula de que tus datos se distribuyen normalmente.</p>
+<p>Ahora evaluamos las funciones de autocorrelación de los residuos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">acf</span>(residuos_modelo_auto<span class="sc">^</span><span class="dv">2</span>, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación"</span>)</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pacf</span>(residuos_modelo_auto<span class="sc">^</span><span class="dv">2</span>, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación parcial"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Los correlogramas muestran que hay un comportamiento heterocedástico de los residuos.</p>
+</section>
+</section>
+</section>
+<section id="heterocedasticidad" class="level1">
+<h1>Heterocedasticidad</h1>
+<section id="identificación-1" class="level2">
+<h2 class="anchored" data-anchor-id="identificación-1">Identificación</h2>
+<p>Analizamos los residuos al cuadrado.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">checkresiduals</span>(modelo_auto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Ljung-Box test
+
+data:  Residuals from ARIMA(2,1,1)(2,0,0)[12]
+Q* = 21.437, df = 19, p-value = 0.3131
+
+Model df: 5.   Total lags used: 24</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>Errores_cuadrado <span class="ot">=</span> <span class="fu">resid</span>(modelo_auto)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Indicamos que sea una serie de tiempo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>Serie_Errores_cuadrado <span class="ot">&lt;-</span> <span class="fu">ts</span>(Errores_cuadrado, <span class="at">start =</span> <span class="fu">c</span>(<span class="dv">1994</span>,<span class="dv">1</span>), <span class="at">end =</span> <span class="fu">c</span>(<span class="dv">2021</span>,<span class="dv">8</span>), <span class="at">frequency =</span> <span class="dv">12</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Serie_Errores_cuadrado)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              Jan          Feb          Mar          Apr          May
+1994 8.825083e-06 4.024444e-02 1.253395e-03 1.471864e-01 1.270564e+00
+1995 6.614774e-02 2.688251e-01 6.949149e-01 4.105068e-02 2.376022e-01
+1996 1.811964e-01 4.743478e-01 9.453873e-04 5.524046e-01 1.332695e-01
+1997 3.345305e-01 3.765696e-01 4.551632e-02 1.711462e-01 9.295233e-04
+1998 1.169296e+00 1.468641e-02 5.899657e-01 1.495268e-03 1.896942e-02
+1999 1.566131e+00 3.207233e-01 9.348788e-05 9.809146e-02 2.722979e-01
+2000 1.395422e-03 5.575112e-01 6.953595e-01 6.645878e-02 3.216144e-01
+2001 2.825342e-01 4.661894e-02 4.999611e-02 1.698966e-01 8.888091e-04
+2002 9.917972e-02 1.675313e-02 2.635208e-01 1.207040e-01 2.114733e-01
+2003 1.879075e-03 1.612431e+00 2.808369e-01 6.975479e-02 1.041209e+00
+2004 1.218799e+00 1.273448e+00 7.501892e-01 1.249055e+00 2.346700e-02
+2005 4.860391e-01 9.000632e-01 2.446237e+00 6.232073e-02 1.636292e-02
+2006 3.182225e-01 2.085195e-01 9.335448e-02 1.483562e+00 7.433158e-03
+2007 4.195750e-03 3.324688e-01 1.633146e-01 3.797582e-03 1.739742e-01
+2008 7.666534e-01 2.244157e-01 1.040309e-01 6.131235e-04 3.120516e-02
+2009 2.048392e+00 1.214144e-02 1.281780e+00 8.426437e-02 8.861281e-01
+2010 4.329416e-02 4.272663e-01 5.231308e-01 2.906261e-01 4.444931e-01
+2011 3.291230e-03 1.746469e-01 5.526611e-04 8.543515e-01 1.661042e+00
+2012 6.489195e-01 1.434283e+00 1.385947e-02 2.893160e-01 1.249121e-01
+2013 2.013479e+00 9.265711e-01 1.053469e+00 1.546321e-02 7.330080e-02
+2014 1.578628e-01 4.806665e+00 4.708307e-02 1.884630e-02 3.878253e-02
+2015 6.454511e-02 1.728557e-01 6.463158e-02 3.626115e-01 9.353012e-02
+2016 2.337972e+00 5.925810e-01 1.995100e-01 5.785447e-02 2.777856e-05
+2017 4.113327e-01 9.985676e-04 1.409161e+00 6.557746e-02 1.487650e-02
+2018 1.899106e-02 4.289023e-05 1.466559e-01 2.611568e-02 1.215868e-01
+2019 2.477108e-02 3.634477e-03 8.300501e-04 6.743738e-02 1.517375e-01
+2020 1.663938e-02 1.467006e-03 3.105993e-02 7.004251e-01 6.099263e-01
+2021 6.864445e-02 3.979423e-04 1.797476e-01 2.335375e-01 1.752703e+00
+              Jun          Jul          Aug          Sep          Oct
+1994 3.447020e-02 3.005274e-01 2.312610e-02 2.419328e-01 2.452580e-02
+1995 6.408050e-01 7.253964e-01 4.063560e-02 2.185617e-03 1.566772e-03
+1996 1.532564e-01 7.598455e-02 8.791211e-01 1.949520e-01 4.744201e-02
+1997 8.676976e-02 9.452531e-03 1.520567e-03 6.595357e-03 2.285296e-01
+1998 5.261544e-01 1.341044e-01 4.885417e-03 1.946850e-01 2.619521e-02
+1999 1.625383e-01 1.814838e-03 1.358283e+00 1.392537e-01 1.327628e+00
+2000 1.676657e-01 9.176032e-02 2.634954e-01 6.896724e-01 1.062494e+00
+2001 2.284835e-01 1.346964e-02 5.503878e-03 4.452187e-03 5.258144e-02
+2002 1.059794e+00 1.662591e-01 2.408379e-01 6.601447e-02 1.118810e-03
+2003 1.265695e+00 1.852076e-01 1.646482e+00 1.359100e-02 4.180992e-01
+2004 6.777530e-01 2.257012e-01 4.544355e-02 2.805319e-02 3.392562e-01
+2005 1.315076e-02 7.652890e-02 4.717843e-01 2.598223e-04 1.813930e-01
+2006 3.971588e-01 6.120360e-01 1.653679e-02 8.984458e-01 1.272011e+00
+2007 3.183082e-02 1.055047e+00 4.354756e-01 3.592285e-01 5.924966e-01
+2008 5.984612e-01 4.746537e-04 1.500940e-01 3.994908e-01 1.080939e-01
+2009 9.885582e-01 1.207483e-01 1.400866e-01 8.445440e-01 4.127721e-01
+2010 2.895186e-01 1.184524e-03 1.087646e-02 6.765764e-03 6.230866e-01
+2011 2.310692e-01 5.499352e-01 3.159716e-01 2.074062e-01 8.870591e-02
+2012 2.552921e-01 6.584762e-02 2.511086e-01 1.646498e-01 3.142328e-02
+2013 7.330873e-02 2.869306e-02 4.971568e-01 2.565666e-01 4.255661e-01
+2014 3.181062e-03 1.131758e+00 6.604675e-01 2.051388e-01 4.191605e-01
+2015 1.940263e-02 6.219102e-01 1.526798e-01 7.052038e-02 1.343312e-01
+2016 2.969063e-03 2.288348e-01 7.900553e-02 5.630602e-01 6.820749e-02
+2017 2.082753e-01 5.632729e-02 1.386050e-01 3.901150e-01 1.906632e-01
+2018 2.207238e-01 6.627297e-01 4.084611e-01 4.817538e-02 1.031621e-01
+2019 1.630594e-01 1.602105e-01 5.823222e-02 8.058727e-02 2.751699e-01
+2020 5.503419e-01 9.694237e-03 1.611402e+00 1.703908e-01 1.983250e-02
+2021 1.091478e-01 2.219856e-01 6.444600e-01                          
+              Nov          Dec
+1994 5.946214e-01 1.028440e+00
+1995 2.163990e-01 6.922266e-01
+1996 1.751961e-02 1.627554e-02
+1997 1.576371e-01 4.597916e-01
+1998 3.758264e-02 5.928953e-01
+1999 2.396269e-01 1.370542e-03
+2000 1.724204e-01 2.138946e-02
+2001 1.135316e+00 8.051752e-01
+2002 3.507218e-01 8.894975e-01
+2003 9.225909e-01 2.275598e-01
+2004 2.735507e-01 3.578905e-02
+2005 1.255500e-01 1.304803e+00
+2006 1.026188e-02 4.235256e+00
+2007 4.002932e-01 4.156399e-01
+2008 1.374739e+00 1.000343e+00
+2009 1.512642e+00 1.333438e+00
+2010 2.343172e+00 5.629604e-01
+2011 3.065836e+00 1.172939e-01
+2012 5.876230e-02 8.646243e-02
+2013 5.251270e-02 1.683282e-01
+2014 5.960548e-01 5.675809e-03
+2015 2.007938e-01 5.001929e-01
+2016 5.019279e-01 3.268619e-02
+2017 2.919417e-03 7.992851e-03
+2018 5.921426e-01 1.069491e-03
+2019 7.215070e-05 3.155599e-01
+2020 3.754193e-04 4.420621e-02
+2021                          </code></pre>
+</div>
+</div>
+<p>Visualizamos los residuos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Errores_cuadrado) </span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Errores_cuadrado)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="prueba-de-componente-arch-en-el-modelo" class="level3">
+<h3 class="anchored" data-anchor-id="prueba-de-componente-arch-en-el-modelo">Prueba de componente ARCH en el modelo</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>ModeloARCH1 <span class="ot">=</span> <span class="fu">ArchTest</span>(D_Serie_plomo_boxCox, <span class="at">lags =</span> <span class="dv">1</span>, <span class="at">demean =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>ModeloARCH1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    ARCH LM-test; Null hypothesis: no ARCH effects
+
+data:  D_Serie_plomo_boxCox
+Chi-squared = 32.35, df = 1, p-value = 1.288e-08</code></pre>
+</div>
+</div>
+<p>Concluímos la presencia de heterocedasticidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>ModeloARCH2 <span class="ot">=</span> <span class="fu">ArchTest</span>(D_Serie_plomo_boxCox, <span class="at">lags =</span> <span class="dv">2</span>, <span class="at">demean =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>ModeloARCH2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    ARCH LM-test; Null hypothesis: no ARCH effects
+
+data:  D_Serie_plomo_boxCox
+Chi-squared = 34.804, df = 2, p-value = 2.77e-08</code></pre>
+</div>
+</div>
+<p>Concluímos la presencia de heterocedasticidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>ModeloARCH3 <span class="ot">=</span> <span class="fu">ArchTest</span>(D_Serie_plomo_boxCox, <span class="at">lags =</span> <span class="dv">3</span>, <span class="at">demean =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>ModeloARCH3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    ARCH LM-test; Null hypothesis: no ARCH effects
+
+data:  D_Serie_plomo_boxCox
+Chi-squared = 35.158, df = 3, p-value = 1.128e-07</code></pre>
+</div>
+</div>
+<p>Concluímos la presencia de heterocedasticidad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>ModeloARCH4 <span class="ot">=</span> <span class="fu">ArchTest</span>(D_Serie_plomo_boxCox, <span class="at">lags =</span> <span class="dv">4</span>, <span class="at">demean =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>ModeloARCH4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    ARCH LM-test; Null hypothesis: no ARCH effects
+
+data:  D_Serie_plomo_boxCox
+Chi-squared = 37.411, df = 4, p-value = 1.482e-07</code></pre>
+</div>
+</div>
+<p>Concluímos la presencia de heterocedasticidad.</p>
+<p>En general, concluímos que la serie temporal del plomo presenta heterocedasticidad.</p>
+</section>
+</section>
+<section id="estimación-1" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-1">Estimación</h2>
+<section id="plnateamiento-del-modelo-arch-garch" class="level3">
+<h3 class="anchored" data-anchor-id="plnateamiento-del-modelo-arch-garch">Plnateamiento del modelo ARCH / GARCH</h3>
+<p>Tomamos como punto de partida a:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>ugarch0 <span class="ot">=</span> <span class="fu">ugarchspec</span>()</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>ugarch0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*       GARCH Model Spec          *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+------------------------------------
+GARCH Model     : sGARCH(1,1)
+Variance Targeting  : FALSE 
+
+Conditional Mean Dynamics
+------------------------------------
+Mean Model      : ARFIMA(1,0,1)
+Include Mean        : TRUE 
+GARCH-in-Mean       : FALSE 
+
+Conditional Distribution
+------------------------------------
+Distribution    :  norm 
+Includes Skew   :  FALSE 
+Includes Shape  :  FALSE 
+Includes Lambda :  FALSE </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (0,1)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>ugarch01 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)))</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>ugfit01 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch01, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>ugfit01</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(0,0,1)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.009657    0.006217   1.5532  0.12038
+ma1    -0.826875    0.026231 -31.5228  0.00000
+omega   0.006634    0.007570   0.8764  0.38081
+alpha1  0.025464    0.016137   1.5780  0.11456
+beta1   0.958633    0.022998  41.6832  0.00000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.009657    0.006011   1.6066 0.108147
+ma1    -0.826875    0.017672 -46.7910 0.000000
+omega   0.006634    0.005155   1.2870 0.198101
+alpha1  0.025464    0.015097   1.6868 0.091651
+beta1   0.958633    0.014491  66.1560 0.000000
+
+LogLikelihood : -323.4115 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9844
+Bayes        2.0418
+Shibata      1.9839
+Hannan-Quinn 2.0073
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                        statistic   p-value
+Lag[1]                      8.285 3.996e-03
+Lag[2*(p+q)+(p+q)-1][2]     8.538 6.319e-08
+Lag[4*(p+q)+(p+q)-1][5]    10.659 5.655e-04
+d.o.f=1
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                    0.04123  0.8391
+Lag[2*(p+q)+(p+q)-1][5]   0.84588  0.8935
+Lag[4*(p+q)+(p+q)-1][9]   1.53999  0.9522
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.2293 0.500 2.000  0.6320
+ARCH Lag[5]    1.5923 1.440 1.667  0.5684
+ARCH Lag[7]    1.8783 2.315 1.543  0.7431
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  0.9311
+Individual Statistics:             
+mu     0.1535
+ma1    0.2354
+omega  0.2405
+alpha1 0.1672
+beta1  0.2202
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.28 1.47 1.88
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value   prob sig
+Sign Bias           0.7345 0.4631    
+Negative Sign Bias  0.1926 0.8474    
+Positive Sign Bias  0.5729 0.5671    
+Joint Effect        1.1290 0.7701    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     25.44      0.14671
+2    30     24.20      0.71919
+3    40     53.89      0.05669
+4    50     51.63      0.37145
+
+
+Elapsed time : 0.08975101 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (0,2)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>ugarch02 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>)))</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>ugfit02 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch02, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>ugfit02</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(0,0,2)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.010060    0.007187   1.39974  0.16159
+ma1    -0.994372    0.054167 -18.35756  0.00000
+ma2     0.199573    0.053482   3.73156  0.00019
+omega   0.006903    0.007457   0.92565  0.35463
+alpha1  0.023320    0.015818   1.47425  0.14041
+beta1   0.959672    0.023234  41.30393  0.00000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010060    0.006890   1.4600 0.144292
+ma1    -0.994372    0.057946 -17.1602 0.000000
+ma2     0.199573    0.054301   3.6753 0.000238
+omega   0.006903    0.005238   1.3178 0.187565
+alpha1  0.023320    0.014253   1.6361 0.101813
+beta1   0.959672    0.015920  60.2820 0.000000
+
+LogLikelihood : -317.0428 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9519
+Bayes        2.0208
+Shibata      1.9513
+Hannan-Quinn 1.9794
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                    0.00522  0.9424
+Lag[2*(p+q)+(p+q)-1][5]   0.63198  1.0000
+Lag[4*(p+q)+(p+q)-1][9]   1.43287  0.9978
+d.o.f=2
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.2052  0.6505
+Lag[2*(p+q)+(p+q)-1][5]    1.2548  0.7998
+Lag[4*(p+q)+(p+q)-1][9]    2.7599  0.7979
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.0367 0.500 2.000  0.8481
+ARCH Lag[5]    2.0805 1.440 1.667  0.4537
+ARCH Lag[7]    3.1926 2.315 1.543  0.4780
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.2068
+Individual Statistics:              
+mu     0.11081
+ma1    0.32076
+ma2    0.06215
+omega  0.19118
+alpha1 0.14871
+beta1  0.17799
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.49 1.68 2.12
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias            2.021 0.04411  **
+Negative Sign Bias   1.093 0.27526    
+Positive Sign Bias   1.137 0.25639    
+Joint Effect         4.085 0.25246    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     13.23       0.8266
+2    30     27.82       0.5275
+3    40     31.42       0.8009
+4    50     33.20       0.9591
+
+
+Elapsed time : 0.0806601 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (0,3)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>ugarch03 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)))</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>ugfit03 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch03, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>ugfit03</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(0,0,3)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.009986    0.007130   1.40060 0.161335
+ma1    -0.998133    0.057503 -17.35795 0.000000
+ma2     0.213962    0.084785   2.52359 0.011616
+ma3    -0.012619    0.056749  -0.22236 0.824034
+omega   0.006962    0.007531   0.92453 0.355212
+alpha1  0.023730    0.016111   1.47291 0.140774
+beta1   0.959089    0.023501  40.81061 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.009986    0.006895   1.4482 0.147554
+ma1    -0.998133    0.059362 -16.8142 0.000000
+ma2     0.213962    0.090169   2.3729 0.017649
+ma3    -0.012619    0.060989  -0.2069 0.836086
+omega   0.006962    0.005348   1.3018 0.192978
+alpha1  0.023730    0.015266   1.5545 0.120067
+beta1   0.959089    0.016655  57.5860 0.000000
+
+LogLikelihood : -317.0596 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9581
+Bayes        2.0385
+Shibata      1.9572
+Hannan-Quinn 1.9901
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                   0.0001023  0.9919
+Lag[2*(p+q)+(p+q)-1][8]  1.2486126  1.0000
+Lag[4*(p+q)+(p+q)-1][14] 4.0148393  0.9736
+d.o.f=3
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.1953  0.6585
+Lag[2*(p+q)+(p+q)-1][5]    1.2253  0.8069
+Lag[4*(p+q)+(p+q)-1][9]    2.7848  0.7939
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]   0.02798 0.500 2.000  0.8671
+ARCH Lag[5]   2.04544 1.440 1.667  0.4613
+ARCH Lag[7]   3.23763 2.315 1.543  0.4699
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.3755
+Individual Statistics:              
+mu     0.11278
+ma1    0.31865
+ma2    0.06431
+ma3    0.14812
+omega  0.19207
+alpha1 0.14822
+beta1  0.17747
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.69 1.9 2.35
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias           1.8514 0.06501   *
+Negative Sign Bias  0.9903 0.32277    
+Positive Sign Bias  1.0592 0.29028    
+Joint Effect        3.4282 0.33020    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     14.44       0.7576
+2    30     26.92       0.5763
+3    40     40.84       0.3894
+4    50     33.50       0.9555
+
+
+Elapsed time : 0.1188731 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (0,4)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>ugarch04 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>)))</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>ugfit04 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch04, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>ugfit04</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(0,0,4)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.009932    0.006857   1.44848 0.147484
+ma1    -0.992990    0.056461 -17.58706 0.000000
+ma2     0.201948    0.080330   2.51399 0.011938
+ma3     0.049616    0.078187   0.63458 0.525703
+ma4    -0.063896    0.055766  -1.14579 0.251881
+omega   0.006949    0.007670   0.90602 0.364928
+alpha1  0.022488    0.016090   1.39759 0.162235
+beta1   0.960239    0.023906  40.16755 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.009932    0.006678   1.48734 0.136925
+ma1    -0.992990    0.058311 -17.02927 0.000000
+ma2     0.201948    0.086046   2.34697 0.018927
+ma3     0.049616    0.079027   0.62784 0.530111
+ma4    -0.063896    0.055635  -1.14849 0.250765
+omega   0.006949    0.005384   1.29061 0.196839
+alpha1  0.022488    0.015586   1.44282 0.149070
+beta1   0.960239    0.016793  57.18020 0.000000
+
+LogLikelihood : -316.4289 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9603
+Bayes        2.0522
+Shibata      1.9592
+Hannan-Quinn 1.9969
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                    0.001635  0.9677
+Lag[2*(p+q)+(p+q)-1][11]  1.301535  1.0000
+Lag[4*(p+q)+(p+q)-1][19]  5.666099  0.9819
+d.o.f=4
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.1761  0.6747
+Lag[2*(p+q)+(p+q)-1][5]    1.3297  0.7817
+Lag[4*(p+q)+(p+q)-1][9]    2.9565  0.7661
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.1805 0.500 2.000  0.6710
+ARCH Lag[5]    2.2894 1.440 1.667  0.4108
+ARCH Lag[7]    3.4861 2.315 1.543  0.4267
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.77
+Individual Statistics:              
+mu     0.12647
+ma1    0.31704
+ma2    0.06312
+ma3    0.13194
+ma4    0.35910
+omega  0.20227
+alpha1 0.15233
+beta1  0.18671
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.89 2.11 2.59
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias            2.203 0.02831  **
+Negative Sign Bias   1.217 0.22458    
+Positive Sign Bias   1.230 0.21977    
+Joint Effect         4.853 0.18291    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     16.13       0.6486
+2    30     18.03       0.9436
+3    40     35.28       0.6401
+4    50     38.94       0.8478
+
+
+Elapsed time : 0.1295662 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (1,1)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>ugarch11 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)))</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>ugfit11 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch11, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>ugfit11</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(1,0,1)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.009751    0.006818   1.43016 0.152671
+ar1    -0.225950    0.063675  -3.54850 0.000387
+ma1    -0.761593    0.040378 -18.86139 0.000000
+omega   0.006686    0.007181   0.93112 0.351792
+alpha1  0.025485    0.015938   1.59904 0.109812
+beta1   0.958066    0.022668  42.26425 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.009751    0.006571   1.4839 0.137836
+ar1    -0.225950    0.060184  -3.7543 0.000174
+ma1    -0.761593    0.032027 -23.7795 0.000000
+omega   0.006686    0.005188   1.2888 0.197465
+alpha1  0.025485    0.014365   1.7741 0.076053
+beta1   0.958066    0.015800  60.6355 0.000000
+
+LogLikelihood : -317.4172 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9542
+Bayes        2.0231
+Shibata      1.9535
+Hannan-Quinn 1.9817
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.0508  0.8217
+Lag[2*(p+q)+(p+q)-1][5]    1.4665  0.9985
+Lag[4*(p+q)+(p+q)-1][9]    2.3031  0.9677
+d.o.f=2
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.2032  0.6521
+Lag[2*(p+q)+(p+q)-1][5]    1.1546  0.8238
+Lag[4*(p+q)+(p+q)-1][9]    2.6946  0.8081
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]   0.01337 0.500 2.000  0.9080
+ARCH Lag[5]   1.90820 1.440 1.667  0.4919
+ARCH Lag[7]   3.11174 2.315 1.543  0.4927
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.0279
+Individual Statistics:             
+mu     0.1207
+ar1    0.3345
+ma1    0.3564
+omega  0.1972
+alpha1 0.1509
+beta1  0.1811
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.49 1.68 2.12
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value   prob sig
+Sign Bias           0.8957 0.3711    
+Negative Sign Bias  0.4881 0.6258    
+Positive Sign Bias  0.4861 0.6272    
+Joint Effect        0.8037 0.8486    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     13.83       0.7933
+2    30     22.38       0.8040
+3    40     38.67       0.4849
+4    50     43.47       0.6960
+
+
+Elapsed time : 0.08017015 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (1,2)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>ugarch12 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)))</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>ugfit12 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch12, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>ugfit12</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(1,0,2)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010016    0.007150  1.40089 0.161248
+ar1    -0.037757    0.217066 -0.17394 0.861909
+ma1    -0.959073    0.211598 -4.53254 0.000006
+ma2     0.170786    0.175976  0.97051 0.331793
+omega   0.006887    0.007426  0.92742 0.353709
+alpha1  0.023616    0.015930  1.48249 0.138209
+beta1   0.959412    0.023210 41.33580 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010016    0.006884  1.45486  0.14571
+ar1    -0.037757    0.180183 -0.20955  0.83402
+ma1    -0.959073    0.186571 -5.14053  0.00000
+ma2     0.170786    0.148025  1.15376  0.24860
+omega   0.006887    0.005259  1.30959  0.19034
+alpha1  0.023616    0.014707  1.60576  0.10833
+beta1   0.959412    0.016189 59.26458  0.00000
+
+LogLikelihood : -317.0279 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9579
+Bayes        2.0383
+Shibata      1.9570
+Hannan-Quinn 1.9899
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                    0.001225  0.9721
+Lag[2*(p+q)+(p+q)-1][8]   1.225885  1.0000
+Lag[4*(p+q)+(p+q)-1][14]  3.987657  0.9748
+d.o.f=3
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.2014  0.6536
+Lag[2*(p+q)+(p+q)-1][5]    1.2422  0.8029
+Lag[4*(p+q)+(p+q)-1][9]    2.7800  0.7947
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.0323 0.500 2.000  0.8574
+ARCH Lag[5]    2.0675 1.440 1.667  0.4565
+ARCH Lag[7]    3.2241 2.315 1.543  0.4723
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.3507
+Individual Statistics:              
+mu     0.11179
+ar1    0.45415
+ma1    0.33206
+ma2    0.06465
+omega  0.19151
+alpha1 0.14876
+beta1  0.17790
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.69 1.9 2.35
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value   prob sig
+Sign Bias           1.8345 0.0675   *
+Negative Sign Bias  0.9783 0.3286    
+Positive Sign Bias  1.0518 0.2937    
+Joint Effect        3.3656 0.3386    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     14.92       0.7276
+2    30     26.37       0.6056
+3    40     37.22       0.5514
+4    50     37.43       0.8863
+
+
+Elapsed time : 0.1055789 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (1,3)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>ugarch13 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)))</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>ugfit13 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch13, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>ugfit13</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(1,0,3)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010347    0.007322  1.41303 0.157646
+ar1    -0.845299    0.177174 -4.77102 0.000002
+ma1    -0.139790    0.179874 -0.77715 0.437068
+ma2    -0.665335    0.162677 -4.08991 0.000043
+ma3     0.189409    0.055373  3.42062 0.000625
+omega   0.007103    0.008057  0.88157 0.378008
+alpha1  0.020880    0.016400  1.27314 0.202968
+beta1   0.961545    0.025225 38.11927 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010347    0.007088   1.4599 0.144330
+ar1    -0.845299    0.094567  -8.9387 0.000000
+ma1    -0.139790    0.115530  -1.2100 0.226285
+ma2    -0.665335    0.084815  -7.8446 0.000000
+ma3     0.189409    0.051972   3.6444 0.000268
+omega   0.007103    0.005488   1.2943 0.195560
+alpha1  0.020880    0.016301   1.2809 0.200229
+beta1   0.961545    0.017991  53.4471 0.000000
+
+LogLikelihood : -316.7772 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9624
+Bayes        2.0543
+Shibata      1.9613
+Hannan-Quinn 1.9991
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                     0.02783  0.8675
+Lag[2*(p+q)+(p+q)-1][11]   1.68543  1.0000
+Lag[4*(p+q)+(p+q)-1][19]   5.79123  0.9782
+d.o.f=4
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                      0.173  0.6775
+Lag[2*(p+q)+(p+q)-1][5]     1.341  0.7789
+Lag[4*(p+q)+(p+q)-1][9]     2.739  0.8011
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]   0.07763 0.500 2.000  0.7805
+ARCH Lag[5]   2.27391 1.440 1.667  0.4138
+ARCH Lag[7]   3.19721 2.315 1.543  0.4771
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.7521
+Individual Statistics:              
+mu     0.11114
+ar1    0.65376
+ma1    0.86535
+ma2    0.06299
+ma3    0.22298
+omega  0.19740
+alpha1 0.15064
+beta1  0.18425
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.89 2.11 2.59
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias           1.8057 0.07189   *
+Negative Sign Bias  0.9135 0.36166    
+Positive Sign Bias  1.0711 0.28492    
+Joint Effect        3.2671 0.35225    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     15.65       0.6807
+2    30     21.11       0.8549
+3    40     44.47       0.2523
+4    50     59.79       0.1390
+
+
+Elapsed time : 0.152854 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (1,4)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>ugarch14 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>)))</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>ugfit14 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch14, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>ugfit14</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(1,0,4)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010186    0.007067  1.44142  0.14947
+ar1    -0.695216    0.929908 -0.74762  0.45469
+ma1    -0.299613    0.934070 -0.32076  0.74839
+ma2    -0.489851    0.921389 -0.53164  0.59497
+ma3     0.186250    0.138820  1.34167  0.17970
+ma4    -0.057204    0.085977 -0.66535  0.50583
+omega   0.007056    0.008129  0.86790  0.38545
+alpha1  0.021061    0.016512  1.27555  0.20211
+beta1   0.961385    0.025428 37.80839  0.00000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010186    0.007027  1.44969  0.14714
+ar1    -0.695216    2.393740 -0.29043  0.77149
+ma1    -0.299613    2.413828 -0.12412  0.90122
+ma2    -0.489851    2.378788 -0.20592  0.83685
+ma3     0.186250    0.329677  0.56495  0.57211
+ma4    -0.057204    0.173712 -0.32930  0.74193
+omega   0.007056    0.005652  1.24824  0.21194
+alpha1  0.021061    0.017016  1.23777  0.21580
+beta1   0.961385    0.018732 51.32318  0.00000
+
+LogLikelihood : -316.4512 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9665
+Bayes        2.0699
+Shibata      1.9650
+Hannan-Quinn 2.0077
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                   0.0001623  0.9898
+Lag[2*(p+q)+(p+q)-1][14] 3.0826708  1.0000
+Lag[4*(p+q)+(p+q)-1][24] 7.9994739  0.9705
+d.o.f=5
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.1665  0.6832
+Lag[2*(p+q)+(p+q)-1][5]    1.3046  0.7878
+Lag[4*(p+q)+(p+q)-1][9]    2.8402  0.7850
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]   0.09564 0.500 2.000  0.7571
+ARCH Lag[5]   2.24045 1.440 1.667  0.4205
+ARCH Lag[7]   3.36065 2.315 1.543  0.4482
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  2.3943
+Individual Statistics:              
+mu     0.12112
+ar1    0.57946
+ma1    0.69639
+ma2    0.02841
+ma3    0.14808
+ma4    0.56082
+omega  0.20442
+alpha1 0.15297
+beta1  0.18833
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         2.1 2.32 2.82
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias            2.554 0.01111  **
+Negative Sign Bias   1.476 0.14078    
+Positive Sign Bias   1.400 0.16246    
+Joint Effect         6.523 0.08876   *
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     16.98       0.5915
+2    30     27.82       0.5275
+3    40     37.46       0.5402
+4    50     43.47       0.6960
+
+
+Elapsed time : 0.2413402 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (2,1)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>ugarch21 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>)))</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>ugfit21 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch21, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>ugfit21</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(2,0,1)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.010511    0.007609   1.38134 0.167174
+ar1    -0.293959    0.084594  -3.47495 0.000511
+ar2    -0.101256    0.076193  -1.32894 0.183867
+ma1    -0.698508    0.068083 -10.25972 0.000000
+omega   0.007180    0.008009   0.89646 0.370006
+alpha1  0.021131    0.016064   1.31542 0.188370
+beta1   0.961075    0.024798  38.75665 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010511    0.007233   1.4533 0.146152
+ar1    -0.293959    0.087315  -3.3666 0.000761
+ar2    -0.101256    0.081690  -1.2395 0.215151
+ma1    -0.698508    0.057143 -12.2238 0.000000
+omega   0.007180    0.005485   1.3089 0.190556
+alpha1  0.021131    0.015529   1.3607 0.173600
+beta1   0.961075    0.017531  54.8205 0.000000
+
+LogLikelihood : -317.6742 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9618
+Bayes        2.0422
+Shibata      1.9609
+Hannan-Quinn 1.9938
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                   0.0004629  0.9828
+Lag[2*(p+q)+(p+q)-1][8]  0.7796213  1.0000
+Lag[4*(p+q)+(p+q)-1][14] 3.4857826  0.9905
+d.o.f=3
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.2403  0.6240
+Lag[2*(p+q)+(p+q)-1][5]    1.3893  0.7671
+Lag[4*(p+q)+(p+q)-1][9]    2.8927  0.7766
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.1036 0.500 2.000  0.7475
+ARCH Lag[5]    2.2627 1.440 1.667  0.4160
+ARCH Lag[7]    3.3196 2.315 1.543  0.4553
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.0423
+Individual Statistics:              
+mu     0.10521
+ar1    0.26764
+ar2    0.09025
+ma1    0.33217
+omega  0.19383
+alpha1 0.14957
+beta1  0.18087
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.69 1.9 2.35
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias            1.851 0.06514   *
+Negative Sign Bias   1.023 0.30694    
+Positive Sign Bias   1.066 0.28716    
+Joint Effect         3.425 0.33058    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     14.32       0.7649
+2    30     24.92       0.6823
+3    40     31.66       0.7919
+4    50     33.80       0.9517
+
+
+Elapsed time : 0.149163 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (2,2)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>ugarch22 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)))</span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>ugfit22 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch22, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>ugfit22</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(2,0,2)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010434    0.007355  1.41858 0.156021
+ar1    -0.677456    0.469146 -1.44402 0.148733
+ar2    -0.181261    0.104939 -1.72730 0.084114
+ma1    -0.313505    0.472376 -0.66368 0.506897
+ma2    -0.298671    0.372262 -0.80231 0.422373
+omega   0.007044    0.008033  0.87687 0.380556
+alpha1  0.020839    0.016192  1.28702 0.198088
+beta1   0.961666    0.025094 38.32232 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010434    0.007069  1.47598 0.139950
+ar1    -0.677456    0.361835 -1.87228 0.061168
+ar2    -0.181261    0.075117 -2.41303 0.015820
+ma1    -0.313505    0.377701 -0.83003 0.406519
+ma2    -0.298671    0.297684 -1.00331 0.315709
+omega   0.007044    0.005484  1.28456 0.198947
+alpha1  0.020839    0.015981  1.30395 0.192251
+beta1   0.961666    0.018076 53.20016 0.000000
+
+LogLikelihood : -317.2459 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9652
+Bayes        2.0571
+Shibata      1.9641
+Hannan-Quinn 2.0019
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                    0.001541  0.9687
+Lag[2*(p+q)+(p+q)-1][11]  1.447172  1.0000
+Lag[4*(p+q)+(p+q)-1][19]  5.565098  0.9845
+d.o.f=4
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.2443  0.6211
+Lag[2*(p+q)+(p+q)-1][5]    1.4016  0.7641
+Lag[4*(p+q)+(p+q)-1][9]    2.9202  0.7721
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.1159 0.500 2.000  0.7335
+ARCH Lag[5]    2.2786 1.440 1.667  0.4129
+ARCH Lag[7]    3.3624 2.315 1.543  0.4479
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.7182
+Individual Statistics:              
+mu     0.11285
+ar1    0.26945
+ar2    0.07508
+ma1    0.44421
+ma2    0.04502
+omega  0.20008
+alpha1 0.15272
+beta1  0.18584
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.89 2.11 2.59
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias            2.125 0.03431  **
+Negative Sign Bias   1.240 0.21598    
+Positive Sign Bias   1.143 0.25404    
+Joint Effect         4.522 0.21035    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     16.37       0.6324
+2    30     24.92       0.6823
+3    40     31.42       0.8009
+4    50     34.71       0.9388
+
+
+Elapsed time : 0.1240749 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (2,3)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>ugarch23 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)))</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>ugfit23 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch23, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>ugfit23</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(2,0,3)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010182    0.006859  1.48455 0.137664
+ar1     0.327643    0.185212  1.76901 0.076892
+ar2    -0.662035    0.147796 -4.47939 0.000007
+ma1    -1.286391    0.168931 -7.61489 0.000000
+ma2     1.146133    0.250298  4.57907 0.000005
+ma3    -0.601682    0.130058 -4.62627 0.000004
+omega   0.007298    0.008448  0.86377 0.387715
+alpha1  0.020709    0.016272  1.27263 0.203149
+beta1   0.960832    0.025731 37.34088 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error  t value Pr(&gt;|t|)
+mu      0.010182    0.006729   1.5131 0.130242
+ar1     0.327643    0.222745   1.4709 0.141310
+ar2    -0.662035    0.203244  -3.2573 0.001125
+ma1    -1.286391    0.197606  -6.5099 0.000000
+ma2     1.146133    0.347553   3.2977 0.000975
+ma3    -0.601682    0.178842  -3.3643 0.000767
+omega   0.007298    0.005900   1.2368 0.216147
+alpha1  0.020709    0.015918   1.3009 0.193285
+beta1   0.960832    0.017046  56.3674 0.000000
+
+LogLikelihood : -316.8221 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9687
+Bayes        2.0721
+Shibata      1.9673
+Hannan-Quinn 2.0099
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                      0.3275  0.5672
+Lag[2*(p+q)+(p+q)-1][14]    3.7336  1.0000
+Lag[4*(p+q)+(p+q)-1][24]    8.7711  0.9340
+d.o.f=5
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.0214  0.8837
+Lag[2*(p+q)+(p+q)-1][5]    1.5697  0.7227
+Lag[4*(p+q)+(p+q)-1][9]    3.4305  0.6863
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.5403 0.500 2.000  0.4623
+ARCH Lag[5]    3.0908 1.440 1.667  0.2769
+ARCH Lag[7]    4.2882 2.315 1.543  0.3069
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.9038
+Individual Statistics:              
+mu     0.13580
+ar1    0.11257
+ar2    0.20693
+ma1    0.25181
+ma2    0.23450
+ma3    0.06002
+omega  0.21806
+alpha1 0.15331
+beta1  0.19999
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         2.1 2.32 2.82
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value   prob sig
+Sign Bias           1.6283 0.1044    
+Negative Sign Bias  0.6426 0.5210    
+Positive Sign Bias  1.2354 0.2176    
+Joint Effect        2.9060 0.4063    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     14.92       0.7276
+2    30     27.10       0.5665
+3    40     38.43       0.4959
+4    50     47.10       0.5506
+
+
+Elapsed time : 0.1634111 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (2,4)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>ugarch24 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)))</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>ugfit24 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch24, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>ugfit24</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(2,0,4)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error    t value Pr(&gt;|t|)
+mu      0.009989    0.007261     1.3758  0.16889
+ar1     0.755847    0.039504    19.1334  0.00000
+ar2    -0.874435    0.037315   -23.4336  0.00000
+ma1    -1.752885    0.001468 -1193.7879  0.00000
+ma2     1.887314    0.000584  3230.8775  0.00000
+ma3    -1.077209    0.026768   -40.2431  0.00000
+ma4     0.174974    0.021961     7.9674  0.00000
+omega   0.007865    0.008166     0.9632  0.33545
+alpha1  0.022316    0.016110     1.3852  0.16599
+beta1   0.957617    0.025511    37.5374  0.00000
+
+Robust Standard Errors:
+        Estimate  Std. Error    t value Pr(&gt;|t|)
+mu      0.009989    0.006933     1.4408  0.14965
+ar1     0.755847    0.042403    17.8251  0.00000
+ar2    -0.874435    0.037250   -23.4746  0.00000
+ma1    -1.752885    0.001175 -1491.8900  0.00000
+ma2     1.887314    0.000738  2556.1433  0.00000
+ma3    -1.077209    0.026120   -41.2402  0.00000
+ma4     0.174974    0.020168     8.6757  0.00000
+omega   0.007865    0.006004     1.3101  0.19018
+alpha1  0.022316    0.015660     1.4250  0.15416
+beta1   0.957617    0.018207    52.5951  0.00000
+
+LogLikelihood : -314.6303 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9615
+Bayes        2.0764
+Shibata      1.9598
+Hannan-Quinn 2.0073
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                    0.000615  0.9802
+Lag[2*(p+q)+(p+q)-1][17]  3.879752  1.0000
+Lag[4*(p+q)+(p+q)-1][29] 10.006373  0.9715
+d.o.f=6
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                    0.06964  0.7919
+Lag[2*(p+q)+(p+q)-1][5]   1.28302  0.7930
+Lag[4*(p+q)+(p+q)-1][9]   2.74459  0.8003
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]   0.05843 0.500 2.000  0.8090
+ARCH Lag[5]   2.33959 1.440 1.667  0.4010
+ARCH Lag[7]   3.31734 2.315 1.543  0.4557
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.7919
+Individual Statistics:              
+mu     0.11207
+ar1    0.06687
+ar2    0.06525
+ma1    0.07417
+ma2    0.06206
+ma3    0.06885
+ma4    0.10452
+omega  0.17859
+alpha1 0.13754
+beta1  0.16406
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         2.29 2.54 3.05
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias           1.6715 0.09558   *
+Negative Sign Bias  0.8077 0.41986    
+Positive Sign Bias  1.1762 0.24038    
+Joint Effect        2.8750 0.41130    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     16.13       0.6486
+2    30     33.98       0.2398
+3    40     39.88       0.4310
+4    50     44.98       0.6367
+
+
+Elapsed time : 0.20699 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (3,1)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>ugarch31 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)))</span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>ugfit31 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch31, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a>ugfit31</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(3,0,1)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.009831    0.007114   1.38202 0.166966
+ar1    -0.237161    0.096101  -2.46783 0.013593
+ar2    -0.037521    0.095097  -0.39455 0.693173
+ar3     0.060043    0.076529   0.78458 0.432700
+ma1    -0.755241    0.074716 -10.10814 0.000000
+omega   0.006904    0.007760   0.88962 0.373667
+alpha1  0.021788    0.016081   1.35483 0.175473
+beta1   0.961056    0.024249  39.63247 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.009831    0.006873   1.43043 0.152592
+ar1    -0.237161    0.097891  -2.42271 0.015405
+ar2    -0.037521    0.100967  -0.37161 0.710181
+ar3     0.060043    0.069660   0.86196 0.388713
+ma1    -0.755241    0.060686 -12.44499 0.000000
+omega   0.006904    0.005358   1.28842 0.197599
+alpha1  0.021788    0.015812   1.37790 0.168235
+beta1   0.961056    0.017370  55.32952 0.000000
+
+LogLikelihood : -316.6729 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9618
+Bayes        2.0537
+Shibata      1.9606
+Hannan-Quinn 1.9984
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                    0.002717  0.9584
+Lag[2*(p+q)+(p+q)-1][11]  1.321887  1.0000
+Lag[4*(p+q)+(p+q)-1][19]  5.506516  0.9859
+d.o.f=4
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.2138  0.6438
+Lag[2*(p+q)+(p+q)-1][5]    1.3679  0.7723
+Lag[4*(p+q)+(p+q)-1][9]    2.9671  0.7644
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.1394 0.500 2.000  0.7089
+ARCH Lag[5]    2.2830 1.440 1.667  0.4120
+ARCH Lag[7]    3.4629 2.315 1.543  0.4307
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.9785
+Individual Statistics:              
+mu     0.11717
+ar1    0.32459
+ar2    0.08229
+ar3    0.39508
+ma1    0.32534
+omega  0.20236
+alpha1 0.15393
+beta1  0.18699
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         1.89 2.11 2.59
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value    prob sig
+Sign Bias            2.531 0.01186  **
+Negative Sign Bias   1.463 0.14437    
+Positive Sign Bias   1.355 0.17641    
+Joint Effect         6.408 0.09337   *
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     16.85       0.5997
+2    30     24.20       0.7192
+3    40     33.83       0.7042
+4    50     41.36       0.7728
+
+
+Elapsed time : 0.1262801 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (3,2)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>ugarch32 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>)))</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>ugfit32 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch32, <span class="at">data =</span> D_Serie_plomo_boxCox)</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>ugfit32</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(3,0,2)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.008950    0.006973    1.2834 0.199362
+ar1     0.372878    0.055930    6.6668 0.000000
+ar2     0.116392    0.063477    1.8336 0.066713
+ar3     0.080350    0.063736    1.2607 0.207432
+ma1    -1.373027    0.009566 -143.5268 0.000000
+ma2     0.457797    0.006917   66.1821 0.000000
+omega   0.006893    0.007456    0.9245 0.355226
+alpha1  0.022881    0.016000    1.4301 0.152702
+beta1   0.960092    0.023406   41.0184 0.000000
+
+Robust Standard Errors:
+        Estimate  Std. Error   t value Pr(&gt;|t|)
+mu      0.008950    0.006730    1.3298 0.183579
+ar1     0.372878    0.059105    6.3087 0.000000
+ar2     0.116392    0.064855    1.7946 0.072711
+ar3     0.080350    0.059511    1.3502 0.176959
+ma1    -1.373027    0.006561 -209.2797 0.000000
+ma2     0.457797    0.004852   94.3527 0.000000
+omega   0.006893    0.005235    1.3167 0.187941
+alpha1  0.022881    0.015322    1.4933 0.135356
+beta1   0.960092    0.016563   57.9661 0.000000
+
+LogLikelihood : -316.2401 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.9652
+Bayes        2.0686
+Shibata      1.9638
+Hannan-Quinn 2.0064
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                   0.0005441  0.9814
+Lag[2*(p+q)+(p+q)-1][14] 3.1748314  1.0000
+Lag[4*(p+q)+(p+q)-1][24] 8.4258622  0.9529
+d.o.f=5
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                     0.1799  0.6715
+Lag[2*(p+q)+(p+q)-1][5]    1.3048  0.7877
+Lag[4*(p+q)+(p+q)-1][9]    2.8247  0.7875
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]    0.1063 0.500 2.000  0.7444
+ARCH Lag[5]    2.2247 1.440 1.667  0.4237
+ARCH Lag[7]    3.3163 2.315 1.543  0.4559
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  1.8652
+Individual Statistics:             
+mu     0.1209
+ar1    0.5124
+ar2    0.1089
+ar3    0.1084
+ma1    0.1028
+ma2    0.1088
+omega  0.1944
+alpha1 0.1506
+beta1  0.1811
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         2.1 2.32 2.82
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value   prob sig
+Sign Bias            2.164 0.0312  **
+Negative Sign Bias   1.210 0.2273    
+Positive Sign Bias   1.240 0.2158    
+Joint Effect         4.686 0.1963    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     16.85       0.5997
+2    30     27.64       0.5372
+3    40     37.46       0.5402
+4    50     51.33       0.3827
+
+
+Elapsed time : 0.1466641 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (3,3)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>ugarch33 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>)))</span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>ugfit33 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch33, <span class="at">data =</span> D_Serie_plomo_boxCox)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in arima(data, order = c(modelinc[2], 0, modelinc[3]), include.mean =
+modelinc[1], : possible convergence problem: optim gave code = 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>ugfit33</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(3,0,3)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error     t value Pr(&gt;|t|)
+mu      0.007646    0.000140    54.62758  0.00000
+ar1     0.170414    0.000119  1435.98395  0.00000
+ar2    -0.888152    0.000092 -9692.21943  0.00000
+ar3    -0.147493    0.000090 -1636.69761  0.00000
+ma1    -1.215910    0.000182 -6693.14455  0.00000
+ma2     1.395152    0.000122 11423.98714  0.00000
+ma3    -0.773084    0.000092 -8359.15899  0.00000
+omega   0.007814    0.009716     0.80421  0.42128
+alpha1  0.016873    0.011432     1.47598  0.13995
+beta1   0.961803    0.013974    68.82895  0.00000
+
+Robust Standard Errors:
+        Estimate  Std. Error     t value Pr(&gt;|t|)
+mu      0.007646    0.000226    33.84649  0.00000
+ar1     0.170414    0.001263   134.87946  0.00000
+ar2    -0.888152    0.001166  -761.73752  0.00000
+ar3    -0.147493    0.000932  -158.21625  0.00000
+ma1    -1.215910    0.002157  -563.58784  0.00000
+ma2     1.395152    0.001805   772.97047  0.00000
+ma3    -0.773084    0.000433 -1785.67791  0.00000
+omega   0.007814    0.034929     0.22370  0.82299
+alpha1  0.016873    0.070900     0.23798  0.81189
+beta1   0.961803    0.161358     5.96069  0.00000
+
+LogLikelihood : -303.3641 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.8934
+Bayes        2.0083
+Shibata      1.8917
+Hannan-Quinn 1.9393
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                      0.2031  0.6522
+Lag[2*(p+q)+(p+q)-1][17]    6.3861  1.0000
+Lag[4*(p+q)+(p+q)-1][29]   13.9990  0.6141
+d.o.f=6
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                   0.000421  0.9836
+Lag[2*(p+q)+(p+q)-1][5]  1.877322  0.6477
+Lag[4*(p+q)+(p+q)-1][9]  3.524780  0.6701
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]     0.132 0.500 2.000  0.7164
+ARCH Lag[5]     3.495 1.440 1.667  0.2256
+ARCH Lag[7]     3.999 2.315 1.543  0.3468
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  2.1823
+Individual Statistics:               
+mu     0.009463
+ar1    0.084749
+ar2    0.040388
+ar3    0.127400
+ma1    0.112359
+ma2    0.025122
+ma3    0.127944
+omega  0.240478
+alpha1 0.156217
+beta1  0.235842
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         2.29 2.54 3.05
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value   prob sig
+Sign Bias          0.79369 0.4280    
+Negative Sign Bias 0.07393 0.9411    
+Positive Sign Bias 0.45202 0.6516    
+Joint Effect       1.06756 0.7849    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     25.31       0.1505
+2    30     21.48       0.8412
+3    40     40.36       0.4100
+4    50     43.47       0.6960
+
+
+Elapsed time : 0.4850981 </code></pre>
+</div>
+</div>
+<p>Modelo GARCH (3,4)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>ugarch34 <span class="ot">=</span> <span class="fu">ugarchspec</span>(<span class="at">mean.model =</span> <span class="fu">list</span>(<span class="at">armaOrder =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>)))</span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>ugfit34 <span class="ot">=</span> <span class="fu">ugarchfit</span>(<span class="at">spec =</span> ugarch34, <span class="at">data =</span> D_Serie_plomo_boxCox)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in arima(data, order = c(modelinc[2], 0, modelinc[3]), include.mean =
+modelinc[1], : possible convergence problem: optim gave code = 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>ugfit34</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+*---------------------------------*
+*          GARCH Model Fit        *
+*---------------------------------*
+
+Conditional Variance Dynamics   
+-----------------------------------
+GARCH Model : sGARCH(1,1)
+Mean Model  : ARFIMA(3,0,4)
+Distribution    : norm 
+
+Optimal Parameters
+------------------------------------
+        Estimate  Std. Error     t value Pr(&gt;|t|)
+mu      0.008015    0.000079   101.50629  0.00000
+ar1    -0.058561    0.000042 -1402.70621  0.00000
+ar2    -0.808669    0.000095 -8471.40062  0.00000
+ar3    -0.385453    0.000094 -4092.49264  0.00000
+ma1    -0.998260    0.000157 -6367.08244  0.00000
+ma2     1.097369    0.000143  7655.44604  0.00000
+ma3    -0.456657    0.000090 -5064.26237  0.00000
+ma4    -0.207323    0.000063 -3280.09611  0.00000
+omega   0.006964    0.007469     0.93243  0.35112
+alpha1  0.020134    0.018875     1.06671  0.28610
+beta1   0.960539    0.018883    50.86845  0.00000
+
+Robust Standard Errors:
+        Estimate  Std. Error     t value Pr(&gt;|t|)
+mu      0.008015    0.000034   238.29797 0.000000
+ar1    -0.058561    0.000303  -193.51751 0.000000
+ar2    -0.808669    0.001139  -710.11115 0.000000
+ar3    -0.385453    0.000165 -2336.75373 0.000000
+ma1    -0.998260    0.001491  -669.52397 0.000000
+ma2     1.097369    0.002044   536.92994 0.000000
+ma3    -0.456657    0.000276 -1655.80388 0.000000
+ma4    -0.207323    0.000516  -402.04624 0.000000
+omega   0.006964    0.027471     0.25352 0.799865
+alpha1  0.020134    0.183959     0.10945 0.912845
+beta1   0.960539    0.253914     3.78293 0.000155
+
+LogLikelihood : -300.8067 
+
+Information Criteria
+------------------------------------
+                   
+Akaike       1.8840
+Bayes        2.0104
+Shibata      1.8819
+Hannan-Quinn 1.9344
+
+Weighted Ljung-Box Test on Standardized Residuals
+------------------------------------
+                         statistic p-value
+Lag[1]                      0.3109  0.5771
+Lag[2*(p+q)+(p+q)-1][20]    6.7537  1.0000
+Lag[4*(p+q)+(p+q)-1][34]   16.3545  0.6244
+d.o.f=7
+H0 : No serial correlation
+
+Weighted Ljung-Box Test on Standardized Squared Residuals
+------------------------------------
+                        statistic p-value
+Lag[1]                  0.0001802  0.9893
+Lag[2*(p+q)+(p+q)-1][5] 1.8362757  0.6576
+Lag[4*(p+q)+(p+q)-1][9] 3.6498050  0.6486
+d.o.f=2
+
+Weighted ARCH LM Tests
+------------------------------------
+            Statistic Shape Scale P-Value
+ARCH Lag[3]     0.132 0.500 2.000  0.7164
+ARCH Lag[5]     3.523 1.440 1.667  0.2224
+ARCH Lag[7]     4.240 2.315 1.543  0.3133
+
+Nyblom stability test
+------------------------------------
+Joint Statistic:  2.6224
+Individual Statistics:               
+mu     0.030452
+ar1    0.098253
+ar2    0.009115
+ar3    0.078315
+ma1    0.096031
+ma2    0.010425
+ma3    0.074367
+ma4    0.053526
+omega  0.239634
+alpha1 0.160443
+beta1  0.232196
+
+Asymptotic Critical Values (10% 5% 1%)
+Joint Statistic:         2.49 2.75 3.27
+Individual Statistic:    0.35 0.47 0.75
+
+Sign Bias Test
+------------------------------------
+                   t-value   prob sig
+Sign Bias           0.5411 0.5888    
+Negative Sign Bias  0.1697 0.8654    
+Positive Sign Bias  0.3600 0.7191    
+Joint Effect        0.6439 0.8863    
+
+
+Adjusted Pearson Goodness-of-Fit Test:
+------------------------------------
+  group statistic p-value(g-1)
+1    20     17.34      0.56696
+2    30     33.80      0.24652
+3    40     42.05      0.34018
+4    50     66.13      0.05181
+
+
+Elapsed time : 0.686969 </code></pre>
+</div>
+</div>
+<p>Comparamos el criterio de Akaike de estos modelos y elegimos el de menor valor.</p>
+<p>Modelo GARCH (0,1): 1.9844 Modelo GARCH (0,2): 1.9519 Modelo GARCH (0,3): 1.9581 Modelo GARCH (0,4): 1.9603 Modelo GARCH (1,1): 1.9542 Modelo GARCH (1,2): 1.9579 Modelo GARCH (1,3): 1.9624 Modelo GARCH (1,4): 1.9665 Modelo GARCH (2,1): 1.9618 Modelo GARCH (2,3): 1.9687 Modelo GARCH (2,4): 1.9615 Modelo GARCH (3,1): 1.9618 Modelo GARCH (3,2): 1.9652 Modelo GARCH (3,3): 1.8934 Modelo GARCH (3,4): 1.8840</p>
+<p>El mejor modelo es un GARCH(3,4) con un Akaike igual a 1.8840.</p>
+</section>
+</section>
+<section id="validación-1" class="level2">
+<h2 class="anchored" data-anchor-id="validación-1">Validación</h2>
+<section id="validaciones-al-modelo-garch-33" class="level3">
+<h3 class="anchored" data-anchor-id="validaciones-al-modelo-garch-33">Validaciones al modelo garch (3,3)</h3>
+<p>Los coeficientes del modelo final son:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>ugfit34<span class="sc">@</span>fit<span class="sc">$</span>coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          mu          ar1          ar2          ar3          ma1          ma2 
+ 0.008014971 -0.058561355 -0.808668686 -0.385453033 -0.998260358  1.097368548 
+         ma3          ma4        omega       alpha1        beta1 
+-0.456657328 -0.207322932  0.006964399  0.020134402  0.960538562 </code></pre>
+</div>
+</div>
+<p>La varianza del modelo final es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>ug_var <span class="ot">=</span> ugfit33<span class="sc">@</span>fit<span class="sc">$</span>var</span>
+<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a>ug_var</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 0.3676427 0.3676427 0.3676427 0.3635047 0.3676412 0.3643084 0.3641986
+  [8] 0.3605524 0.3578195 0.3545035 0.3551585 0.3603292 0.3562924 0.3535610
+ [15] 0.3656628 0.3598516 0.3634407 0.3714937 0.3787383 0.3727789 0.3663640
+ [22] 0.3625566 0.3676219 0.3649026 0.3719243 0.3756022 0.3701214 0.3835421
+ [29] 0.3793661 0.3835659 0.3768116 0.3756050 0.3792004 0.3727211 0.3665795
+ [36] 0.3604386 0.3564278 0.3543751 0.3489187 0.3478997 0.3429434 0.3376586
+ [43] 0.3338787 0.3308601 0.3263995 0.3305577 0.3259034 0.3253628 0.3597818
+ [50] 0.3561672 0.3530243 0.3488234 0.3433265 0.3394126 0.3364778 0.3314542
+ [57] 0.3315254 0.3279098 0.3255426 0.3337938 0.3543764 0.3599517 0.3554383
+ [64] 0.3512984 0.3461774 0.3432691 0.3407153 0.3483043 0.3428229 0.3516880
+ [71] 0.3462461 0.3411836 0.3362341 0.3355030 0.3351284 0.3301905 0.3320840
+ [78] 0.3368319 0.3341193 0.3310481 0.3444940 0.3511874 0.3456718 0.3403181
+ [85] 0.3525657 0.3484420 0.3429641 0.3504364 0.3450051 0.3396449 0.3348298
+ [92] 0.3332607 0.3291442 0.3245010 0.3614046 0.3660978 0.3606919 0.3547287
+ [99] 0.3490683 0.3439290 0.3449397 0.3408462 0.3371949 0.3504073 0.3450712
+[106] 0.3483571 0.3443451 0.3433967 0.3469587 0.3666649 0.3605770 0.3597076
+[113] 0.3599361 0.3636130 0.3585532 0.3740919 0.3677597 0.3659722 0.3753538
+[120] 0.3797288 0.3874556 0.3894430 0.3951508 0.4148949 0.4080853 0.4189850
+[127] 0.4127174 0.4063488 0.3991383 0.3972144 0.3899037 0.3831109 0.3783441
+[134] 0.3845384 0.4086850 0.4028583 0.3972913 0.3906799 0.3880680 0.3831394
+[141] 0.3769815 0.3705196 0.3642495 0.3730915 0.3693801 0.3642504 0.3583246
+[148] 0.3768345 0.3703778 0.3710731 0.3714779 0.3651269 0.3718615 0.3937805
+[155] 0.3865541 0.4431137 0.4345062 0.4268681 0.4240458 0.4160138 0.4128634
+[162] 0.4056088 0.4115819 0.4087113 0.4055277 0.4043563 0.4060058 0.4130330
+[169] 0.4211892 0.4184386 0.4105295 0.4031245 0.3958031 0.3929729 0.3876112
+[176] 0.3877931 0.3820380 0.3752784 0.3864641 0.3908362 0.4325803 0.4238707
+[183] 0.4206829 0.4145628 0.4121620 0.4088403 0.4079033 0.4014975 0.4043225
+[190] 0.3978421 0.4102651 0.4430776 0.4349378 0.4460114 0.4398472 0.4308698
+[197] 0.4224470 0.4149481 0.4110652 0.4031816 0.4028566 0.4123143 0.4201028
+[204] 0.4134400 0.4054701 0.3979381 0.3906376 0.3896997 0.4135905 0.4056074
+[211] 0.4080397 0.4006441 0.3974537 0.3983423 0.4128970 0.4068070 0.4036318
+[218] 0.4214909 0.4135183 0.4104644 0.4069037 0.4022878 0.3979527 0.3935152
+[225] 0.3871278 0.3807593 0.3742687 0.3730768 0.4002948 0.4287017 0.4403818
+[232] 0.4333734 0.4347464 0.4260434 0.4242166 0.4308502 0.4339136 0.4253104
+[239] 0.4256298 0.4173787 0.4128477 0.4685204 0.4592514 0.4522762 0.4430160
+[246] 0.4364100 0.4558083 0.4501901 0.4523588 0.4461748 0.4405606 0.4327910
+[253] 0.4243938 0.4181216 0.4102655 0.4035172 0.3989222 0.3940532 0.4031022
+[260] 0.3992396 0.3920569 0.3879719 0.3811714 0.3799643 0.4000282 0.3977637
+[267] 0.3918083 0.3905832 0.3835676 0.3778886 0.3767524 0.3709634 0.3685223
+[274] 0.3627078 0.3647968 0.3599055 0.3685241 0.3626341 0.3741147 0.3684995
+[281] 0.3632180 0.3588244 0.3529899 0.3498717 0.3516472 0.3481079 0.3426521
+[288] 0.3375084 0.3353278 0.3306603 0.3279421 0.3251698 0.3235166 0.3218239
+[295] 0.3243003 0.3255028 0.3219054 0.3191025 0.3273402 0.3226510 0.3228142
+[302] 0.3191898 0.3152298 0.3133238 0.3115172 0.3077247 0.3045823 0.3008819
+[309] 0.2972287 0.2960532 0.2927948 0.2955150 0.2920478 0.2887254 0.2895646
+[316] 0.3019606 0.3064515 0.3082782 0.3043450 0.3177068 0.3167485 0.3127004
+[323] 0.3086047 0.3046948 0.3021918 0.2992841 0.2974641 0.2944741 0.3107706
+[330] 0.3069691 0.3079925</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(<span class="fu">ts</span>(ug_var)) <span class="sc">+</span> </span>
+<span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Varianza de nuestro modelo GARCH (3,4)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="análisis-de-los-cuadrados-de-los-residuales-de-la-nueva-serie" class="level3">
+<h3 class="anchored" data-anchor-id="análisis-de-los-cuadrados-de-los-residuales-de-la-nueva-serie">Análisis de los cuadrados de los residuales de la nueva serie</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a>ug_resid <span class="ot">=</span> (ugfit34<span class="sc">@</span>fit<span class="sc">$</span>residuals)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(<span class="fu">ts</span>(ug_resid)) <span class="sc">+</span> <span class="fu">autolayer</span>(<span class="fu">ts</span>(ug_resid), <span class="at">series =</span> <span class="st">"Residuales al cuadrado"</span>) <span class="sc">+</span> <span class="fu">autolayer</span>(<span class="fu">ts</span>(ug_var), <span class="at">series =</span> <span class="st">"Varianza"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Residuales al cuadrado y Varianza de nuestro modelo GARCH (3,4)"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Tiempo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Esta serie temporal presenta doble heterocedasticidad.</p>
+</section>
+<section id="correlogramas-de-los-residuales-al-cuadrado-de-la-nueva-serie" class="level3">
+<h3 class="anchored" data-anchor-id="correlogramas-de-los-residuales-al-cuadrado-de-la-nueva-serie">Correlogramas de los residuales al cuadrado de la nueva serie</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="fu">acf</span>(ug_resid, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación"</span>)</span>
+<span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pacf</span>(ug_resid, <span class="at">lag.max=</span><span class="dv">34</span>, <span class="at">main =</span> <span class="st">"Función de autocorrelación parcial"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Esta nueva serie de errores al cuadrado sigue siendo heterocedástica.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">checkresiduals</span>(ugfit34<span class="sc">@</span>fit<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Ljung-Box test
+
+data:  Residuals
+Q* = 6.7484, df = 10, p-value = 0.749
+
+Model df: 0.   Total lags used: 10</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="pronóstico" class="level2">
+<h2 class="anchored" data-anchor-id="pronóstico">Pronóstico</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a>prediccion <span class="ot">&lt;-</span> <span class="fu">forecast</span>(modelo_auto, <span class="at">h=</span><span class="dv">4</span>)</span>
+<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(prediccion)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="modelo-estimado" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-estimado">Modelo estimado</h2>
+<p>Para obtener la ecuación estimada de una serie temporal con un modelo ARIMA y un modelo GARCH, necesitamos combinar los componentes de cada modelo.</p>
+<p>El modelo ARIMA(2,1,1)(2,0,0)[12] puede expresarse como:</p>
+<p><span class="math display">\[[ (1 - \phi_1 B - \phi_2 B^2) (1 - B)^1 (y_t - \mu) = (1 + \theta_1 B) \varepsilon_t ]\]</span></p>
+<p>Donde: <span class="math inline">\(- ( \phi_1 ) y ( \phi_2 )\)</span> son los coeficientes autorregresivos. <span class="math inline">\(- ( \theta_1 )\)</span> es el coeficiente de la parte de media móvil. <span class="math inline">\(- ( B )\)</span> es el operador de rezago. <span class="math inline">\(- ( \mu )\)</span> es la media del proceso. <span class="math inline">\(- ( \varepsilon_t )\)</span> es el término de error.</p>
+<p>Y el modelo GARCH(3,4) puede expresarse como:</p>
+<p><span class="math display">\[[ \sigma_t^2 = \omega + \alpha*1* \varepsilon{t-1}^2 + \beta*1* \sigma{t-1}^2 + \alpha*2* \varepsilon{t-2}^2 + \beta*2* \sigma{t-2}^2 + \alpha*3* \varepsilon{t-3}^2 + \beta*3* \sigma{t-3}^2 + \alpha*4* \varepsilon{t-4}^2 ]\]</span></p>
+<p>Donde: <span class="math inline">\(- ( \omega )\)</span> es la constante. <span class="math inline">\(- ( \alpha\_i )\)</span> son los coeficientes de la parte ARCH. <span class="math inline">\(- ( \beta\_i )\)</span> son los coeficientes de la parte GARCH.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
