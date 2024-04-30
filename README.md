@@ -57,3 +57,4 @@ Ciclo 2
 ## Trabajos
 
 * [Trabajo inicial](/trabajoInicial/). Métodos de suavizamiento de una serie temporal
+* [Trabajo final](/trabajoFinal/). Metodología Box-Jenkins sobre la serie temporal de exportaciones del plomo

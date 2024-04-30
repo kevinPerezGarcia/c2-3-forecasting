@@ -21,7 +21,7 @@ FORECASTING
 
 # Información del trabajo
 
-* Fecha de entrega: 05 de abril.
+* Fecha de entrega: 30 de abril.
 * Softwares a usar: Puede usar uno de los dos siguientes lenguajes de programación.
   - Lenguaje de programación R. Código facilitado por el docente ([pd4.R de la sesión 2](../sesion2/notebooks/pd4.R)).
   - Lenguaje de programación Python. El código lo debe desarrollar el alumno.<br>
